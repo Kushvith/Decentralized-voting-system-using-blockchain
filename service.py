@@ -200,9 +200,12 @@ def mine_unconfirmed_transactions():
 @app.route("/register_node",methods=['POST'])
 def register_new_node():
     node_address = request.get_json()["node_address"]
+    host_url = request.get_json()["host_url"]
     if not node_address:
         return "invalid data",400
     peerdb = PeersDb()
+    if host_url not in peerdb.read():
+        peerdb.write([host_url])
     if node_address not in peerdb.read():
         peerdb.write([node_address])
     return get_chain()
@@ -225,14 +228,10 @@ def register_with_existing_node():
         return "Invalid data", 400
     if request.host_url not in peerdb.read():
         peerdb.write([request.host_url])
-    data = {"node_address":node_address}
+    data = {"node_address":node_address,"host_url":request.host_url}
     headers={'Content-Type':"application/json"}
     for peer in peerdb.read():
-        if peer != node_address:
-            response = requests.post(peer+"/register_node",data=json.dumps(data),headers=headers)
-        else:
-            data = {"node_address":request.host_url} 
-            response = requests.post(peer+"/register_node",data=json.dumps(data),headers=headers)
+        response = requests.post(peer+"/register_node",data=json.dumps(data),headers=headers)
     # update(node_address)
     
     if response.status_code == 200:
@@ -337,5 +336,5 @@ def announce_new_block(block):
         print(peer)
 
 # Uncomment this line if you want to specify the port number in the code
-if __name__ == "__main__":
-    app.run(debug=True, port=8000,host="0.0.0.0")
+if  __name__ == "__main__":
+    app.run(debug=True,host="0.0.0.0", port=8000)
