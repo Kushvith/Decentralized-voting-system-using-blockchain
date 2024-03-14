@@ -337,4 +337,5 @@ def announce_new_block(block):
         print(peer)
 
 # Uncomment this line if you want to specify the port number in the code
-# app.run(debug=True, port=8001)
+if __name__ == "__main__":
+    app.run(debug=True, port=8000,host="0.0.0.0")
