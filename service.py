@@ -234,12 +234,12 @@ def register_with_existing_node():
         response = requests.post(peer+"/register_node",data=json.dumps(data),headers=headers)
     # update(node_address)
     
-    if response.status_code == 200:
-        chain_dump = response.json()['chain']
+        if response.status_code == 200:
+            chain_dump = response.json()['chain']
         
-        blockchain = create_chain_from_dump(chain_dump)
+            blockchain = create_chain_from_dump(chain_dump)
                                              
-        return "Registration successful", 200
+    return "Registration successful", 200
 
 def create_chain_from_dump(chain_dump):
     blockchaindb = BlockChainDb()
