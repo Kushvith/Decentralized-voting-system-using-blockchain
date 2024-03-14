@@ -5,7 +5,7 @@ import time
 from flask import Flask, request
 import requests
 
-from database.database import BlockChainDb
+from database.database import BlockChainDb, PeersDb
 
 
 class Block:
@@ -30,7 +30,6 @@ class Blockchain():
 
     def __init__(self):
         self.unconfirmed_transactions = []
-        self.chain = []
         super().__init__
 
     def create_genesis_block(self):
@@ -40,7 +39,7 @@ class Blockchain():
         a valid hash.
         """
         genesis_block = Block(0, [], 0, "0")
-        genesis_block.hash = genesis_block.compute_hash()
+        genesis_block.hash = genesis_block.compute_hash(genesis_block)
         self.write_on_disk([genesis_block.__dict__])
     def write_on_disk(self,block):
         blockchainDb = BlockChainDb()
@@ -105,17 +104,18 @@ class Blockchain():
         previous_hash = "0"
 
         for block in chain:
-            block_hash = block.hash
+            block_hash = block['hash']
             # remove the hash field to recompute the hash again
             # using `compute_hash` method.
-            delattr(block, "hash")
+            print(block)
+            delattr(block, block['hash'])
 
             if not cls.is_valid_proof(block, block_hash) or \
-                    previous_hash != block.previous_hash:
+                    previous_hash != block['previous_hash']:
                 result = False
                 break
 
-            block.hash, previous_hash = block_hash, block_hash
+            block['hash'], previous_hash = block_hash, block_hash
 
         return result
 
@@ -151,12 +151,6 @@ blockchaindb = BlockChainDb()
 if not blockchaindb.lastBlock():
     blockchain.create_genesis_block()
 
-# the address to other participating members of the network
-peers = set()
-
-
-# endpoint to submit a new transaction. This will be used by
-# our application to add new data (posts) to the blockchain
 @app.route('/new_transaction', methods=['POST'])
 def new_transaction():
     tx_data = request.get_json()
@@ -179,7 +173,9 @@ def new_transaction():
 @app.route('/chain', methods=['GET'])
 def get_chain():
     blockchaindb = BlockChainDb()
-    return json.dumps(blockchaindb.read())
+    peer = PeersDb()
+    # a = consensus()
+    return json.dumps({'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
    
 
 
@@ -198,23 +194,19 @@ def mine_unconfirmed_transactions():
         consensus()
         if chain_length == len(blockchaindb.read()):
             # announce the recently mined block to the network
-            announce_new_block(blockchain.last_block)
+            announce_new_block(blockchain.last_block())
         return "Block #{} is mined.".format(blockchain.last_block()['index'])
 
-
-# endpoint to add new peers to the network.
-@app.route('/register_node', methods=['POST'])
-def register_new_peers():
+@app.route("/register_node",methods=['POST'])
+def register_new_node():
     node_address = request.get_json()["node_address"]
     if not node_address:
-        return "Invalid data", 400
-
-    # Add the node to the peer list
-    peers.add(node_address)
-
-    # Return the consensus blockchain to the newly registered node
-    # so that he can sync
+        return "invalid data",400
+    peerdb = PeersDb()
+    if node_address not in peerdb.read():
+        peerdb.write([node_address])
     return get_chain()
+
 
 
 @app.route('/register_with', methods=['POST'])
@@ -224,46 +216,55 @@ def register_with_existing_node():
     register current node with the node specified in the
     request, and sync the blockchain as well as peer data.
     """
+    peerdb = PeersDb()
+    
     node_address = request.get_json()["node_address"]
+    if node_address not in peerdb.read():
+        peerdb.write([node_address])
     if not node_address:
         return "Invalid data", 400
-
-    data = {"node_address": request.host_url}
-    headers = {'Content-Type': "application/json"}
-
-    # Make a request to register with remote node and obtain information
-    response = requests.post(node_address + "/register_node",
-                             data=json.dumps(data), headers=headers)
-
+    if request.host_url not in peerdb.read():
+        peerdb.write([request.host_url])
+    data = {"node_address":node_address}
+    headers={'Content-Type':"application/json"}
+    for peer in peerdb.read():
+        if peer != node_address:
+            response = requests.post(peer+"/register_node",data=json.dumps(data),headers=headers)
+        else:
+            data = {"node_address":request.host_url} 
+            response = requests.post(peer+"/register_node",data=json.dumps(data),headers=headers)
+    # update(node_address)
+    
     if response.status_code == 200:
-        global blockchain
-        global peers
-        # update chain and the peers
         chain_dump = response.json()['chain']
+        
         blockchain = create_chain_from_dump(chain_dump)
-        peers.update(response.json()['peers'])
+                                             
         return "Registration successful", 200
-    else:
-        # if something goes wrong, pass it on to the API response
-        return response.content, response.status_code
-
 
 def create_chain_from_dump(chain_dump):
+    blockchaindb = BlockChainDb()
+    blockchaindb.remove_all()
     generated_blockchain = Blockchain()
     generated_blockchain.create_genesis_block()
+    
+  
     for idx, block_data in enumerate(chain_dump):
-        if idx == 0:
+        if block_data['index'] == 0:
             continue  # skip genesis block
+        
         block = Block(block_data["index"],
                       block_data["transactions"],
                       block_data["timestamp"],
                       block_data["previous_hash"],
                       block_data["nonce"])
         proof = block_data['hash']
+        print(block_data)
         added = generated_blockchain.add_block(block, proof)
         if not added:
             raise Exception("The chain dump is tampered!!")
     return generated_blockchain
+
 
 
 # endpoint to add a block mined by someone else to
@@ -283,7 +284,7 @@ def verify_and_add_block():
 
     if not added:
         return "The block was discarded by the node", 400
-
+    blockchain.unconfirmed_transactions = []
     return "Block added to the chain", 201
 
 
@@ -298,21 +299,23 @@ def consensus():
     Our naive consnsus algorithm. If a longer valid chain is
     found, our chain is replaced with it.
     """
-    global blockchain
-
+    blockchaindb = BlockChainDb()
+    blockchain = {'chain':blockchaindb.read()}
+    blockchai = Blockchain()
     longest_chain = None
-    current_len = len(blockchain.chain)
-
+    peerdb = PeersDb()
+    peers = peerdb.read()
+    current_len = len(blockchain['chain'])
     for node in peers:
-        response = requests.get('{}chain'.format(node))
-        length = response.json()['length']
+        response = requests.get('{}/chain'.format(node))
+        length = response.json()['len']
         chain = response.json()['chain']
-        if length > current_len and blockchain.check_chain_validity(chain):
+        if length > current_len:
             current_len = length
             longest_chain = chain
-
+    
     if longest_chain:
-        blockchain = longest_chain
+        blockchaindb.write(longest_chain)
         return True
 
     return False
@@ -324,12 +327,14 @@ def announce_new_block(block):
     Other blocks can simply verify the proof of work and add it to their
     respective chains.
     """
-    for peer in peers:
-        url = "{}add_block".format(peer)
+    peerdb = PeersDb()
+    for peer in peerdb.read():
+        url = "{}/add_block".format(peer)
         headers = {'Content-Type': "application/json"}
         requests.post(url,
-                      data=json.dumps(block.__dict__, sort_keys=True),
+                      data=json.dumps(block, sort_keys=True),
                       headers=headers)
+        print(peer)
 
 # Uncomment this line if you want to specify the port number in the code
-#app.run(debug=True, port=8000)
+# app.run(debug=True, port=8001)

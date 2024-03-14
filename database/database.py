@@ -25,7 +25,10 @@ class BaseDb:
             data = item
         with open(self.filePath,"w+") as file:
             file.write(json.dumps(data))
-        
+    def remove_all(self):
+        with open(self.filePath,'w+') as file:
+            file.write('[]')
+         
 
 class BlockChainDb(BaseDb):
     def __init__(self) -> None:
@@ -36,3 +39,8 @@ class BlockChainDb(BaseDb):
         data = self.read()
         if data:
             return data[-1]
+
+class PeersDb(BaseDb):
+    def __init__(self) -> None:
+        self.filename = "peers"
+        super().__init__()

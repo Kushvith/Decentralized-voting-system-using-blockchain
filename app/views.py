@@ -34,7 +34,7 @@ def fetch_posts():
         vote_count = []
         chain = json.loads(response.content.decode(encoding="UTF-8"))
         print(chain)
-        for block in chain:
+        for block in chain['chain']:
             for tx in block["transactions"]:
                 tx["index"] = block["index"]
                 tx["hash"] = block["previous_hash"]
