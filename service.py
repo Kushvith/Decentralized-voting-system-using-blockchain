@@ -208,6 +208,7 @@ def register_new_node():
         peerdb.write([host_url])
     if node_address not in peerdb.read():
         peerdb.write([node_address])
+        print(get_chain())
     return get_chain()
 
 
@@ -230,16 +231,15 @@ def register_with_existing_node():
         peerdb.write([request.host_url])
     data = {"node_address":node_address,"host_url":request.host_url}
     headers={'Content-Type':"application/json"}
-    for peer in peerdb.read():
-        response = requests.post(peer+"/register_node",data=json.dumps(data),headers=headers)
+    response = requests.post(node_address+"/register_node",data=json.dumps(data),headers=headers)
     # update(node_address)
     
-        if response.status_code == 200:
-            chain_dump = response.json()['chain']
+    if response.status_code == 200:
+        chain_dump = response.json()['chain']
         
-            blockchain = create_chain_from_dump(chain_dump)
+        blockchain = create_chain_from_dump(chain_dump)
                                              
-    return "Registration successful", 200
+        return "Registration successful", 200
 
 def create_chain_from_dump(chain_dump):
     blockchaindb = BlockChainDb()
