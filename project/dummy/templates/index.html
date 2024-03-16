@@ -1,0 +1,246 @@
+<!-- index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <hr>
+    <h2>Face Recognition Login</h2>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="capture">Capture Image</button>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <div id="result"></div>
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const captureButton = document.getElementById('capture');
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                video.srcObject = stream;
+            })
+            .catch((err) => {
+                console.error('Error accessing webcam:', err);
+            });
+
+        captureButton.addEventListener('click', () => {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageData = canvas.toDataURL('image/jpeg');
+            fetch('/face-login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ image: imageData })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = data.message;
+            })
+            .catch(err => {
+                console.error('Error capturing image:', err);
+            });
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append('email', document.getElementById('email').value);
+            formData.append('password', document.getElementById('password').value);
+            fetch('/login', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.message === 'Logged in successfully!') {
+                    window.location.href = '/';  // Redirect to home page
+                }
+            })
+            .catch(err => {
+                console.error('Error logging in:', err);
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">E-voting Login</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="wrap">
+                    <div class="img" style="background-image: url('/static/images/bg-1.jpg');"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4">Sign In</h3>
+                            </div>
+                        </div>
+                        <form id="loginForm" class="signin-form">
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" id="email" name="email" required>
+                                <label class="form-control-placeholder" for="email">Username</label>
+                            </div>
+                            <div class="form-group">
+                                <input id="password" type="password" class="form-control" name="password" required>
+                                <label class="form-control-placeholder" for="password">Password</label>
+                                <span id="togglePassword" class="fa fa-fw fa-eye field-icon toggle-password" style="cursor: pointer;"></span>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a href="#">Forgot Password</a>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center">Not a member? <a data-toggle="tab" href="user.html">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('email', document.getElementById('email').value);
+        formData.append('password', document.getElementById('password').value);
+        fetch('/login', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.message === 'Logged in successfully!') {
+                    window.location.href = '/face';  // Redirect to face login page
+                }
+            })
+        .catch(err => {
+            console.error('Error logging in:', err);
+        });
+    });
+
+        // Toggle password visibility
+document.getElementById('togglePassword').addEventListener('click', function() {
+    const passwordField = document.getElementById('password');
+    const fieldType = passwordField.getAttribute('type');
+    if (fieldType === 'password') {
+        passwordField.setAttribute('type', 'text');
+        this.classList.remove('fa-eye');
+        this.classList.add('fa-eye-slash');
+    } else {
+        passwordField.setAttribute('type', 'password');
+        this.classList.remove('fa-eye-slash');
+        this.classList.add('fa-eye');
+    }
+});
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login with Face Recognition</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="capture">Capture Image</button>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <div id="result"></div>
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const captureButton = document.getElementById('capture');
+        const resultDiv = document.getElementById('result');
+
+        // Get user media
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                video.srcObject = stream;
+            })
+            .catch((err) => {
+                console.error('Error accessing webcam:', err);
+            });
+
+        // Capture image from webcam
+        captureButton.addEventListener('click', () => {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageData = canvas.toDataURL('image/jpeg');
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ image: imageData })
+            })
+            .then(response => response.json())
+            .then(data => {
+                resultDiv.innerText = data.message;
+            })
+            .catch(err => {
+                console.error('Error capturing image:', err);
+            });
+        });
+    </script>
+</body>
+</html> -->

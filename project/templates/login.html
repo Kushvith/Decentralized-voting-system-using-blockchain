@@ -1,0 +1,148 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Login</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">              
+</head>
+<body>
+<div class="container">
+    <h2>User Login</h2>
+    <form action="{{ url_for('login') }}" method="post">
+        {% if message is defined and message %}
+            <div class="alert alert-warning">{{ message }}</div>
+        {% endif %}
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+            <label for="photo">Photo:</label>
+            <video id="video" width="400" height="300" autoplay></video>
+            <br>
+            <button type="button" id="captureButton" class="btn btn-primary">Capture</button>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <input type="hidden" id="photo" name="photo">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <p class="bottom">Not Registered? <a class="bottom" href="{{ url_for('register') }}">Register here</a></p>
+    </form>
+</div>
+
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const captureButton = document.getElementById('captureButton');
+    const photoInput = document.getElementById('photo');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+            video.srcObject = stream;
+        })
+        .catch((error) => {
+            console.error('Error accessing camera:', error);
+        });
+
+    captureButton.addEventListener('click', () => {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataUrl = canvas.toDataURL('image/jpeg');
+        photoInput.value = dataUrl;
+        console.log('Image captured:', dataUrl);
+    });
+</script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login 05</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Login</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="wrap">
+                    <div class="img" style="background-image: url('/static/images/bg-1.jpg');"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4">Sign In</h3>
+                            </div>
+                            <div class="w-100">
+                                <p class="social-media d-flex justify-content-end">
+                                    <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                                    <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <form action="#" class="signin-form">
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" required>
+                                <label class="form-control-placeholder" for="username">Username</label>
+                            </div>
+                            <div class="form-group">
+                                <input id="password-field" type="password" class="form-control" required>
+                                <label class="form-control-placeholder" for="password">Password</label>
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" onclick="togglePasswordVisibility(this)"></span>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a href="#">Forgot Password</a>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center">Not a member? <a data-toggle="tab" href="{{ url_for('register')}}">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function togglePasswordVisibility(icon) {
+        const passwordField = document.getElementById('password-field');
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordField.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    }
+</script>
+
+</body>
+</html> -->
+

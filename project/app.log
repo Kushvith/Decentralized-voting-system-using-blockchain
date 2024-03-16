@@ -1,0 +1,148 @@
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:35:31] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:38:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:38:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:38:00] "[36mGET /static/images/bg-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:38:06] "[33mGET /user HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:38:13] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:32] "[36mGET /static/images/bg-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:36] "[36mGET /static/images/bg-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 20:40:47] "[36mGET /static/images/bg-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:42:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:42:16] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:43:19] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:44:27] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:44:27] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:45:08] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:45:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2024 20:45:11] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\login\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\sansio\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\sansio\\scaffold.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\templating.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\jinja2\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\jinja2\\environment.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\globals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\wrappers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\sansio\\request.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\helpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\sansio\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\sessions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask_mysqldb\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\re\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\cv2\\mat_wrapper\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\typing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\ctx.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\_internal.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\concurrent\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\idlelib\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\lib2to3\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\test\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\turtledemo\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\wsgiref\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\xmlrpc\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\gunicorn\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\h2\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\h5py\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\ipywidgets\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\jedi\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\jupyterlab\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\jupyterlab_pygments\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\jupyter_console\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\jupyter_lsp\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\keras\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\matplotlib_inline\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mpl_toolkits\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\namex\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\notebook\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\notebook_shim\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\qtconsole\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\scipy\\conftest.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\scipy\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\seleniumwire\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\spyder_kernels\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\tensorflow\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\tinycss2\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\trio_websocket\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\tzdata\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\webencodings\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\wheel\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\widgetsnbextension\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\winpty\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\wrapt\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\pythonwin\\pywin\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug: * Detected change in 'C:\\Program Files\\Python312\\Lib\\email\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-022-908
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 106-106-136
+INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:33:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:33:35] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:33:52] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:34:37] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:34:37] "GET /login HTTP/1.1" 200 -
