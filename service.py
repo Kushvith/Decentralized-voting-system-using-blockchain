@@ -174,7 +174,7 @@ def new_transaction():
 def get_chain():
     blockchaindb = BlockChainDb()
     peer = PeersDb()
-    # a = consensus()
+    #a = consensus()
     return json.dumps({'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
    
 
@@ -208,7 +208,6 @@ def register_new_node():
         peerdb.write([host_url])
     if node_address not in peerdb.read():
         peerdb.write([node_address])
-        print(get_chain())
     return get_chain()
 
 
