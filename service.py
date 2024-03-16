@@ -208,7 +208,6 @@ def register_new_node():
         peerdb.write([host_url])
     if node_address not in peerdb.read():
         peerdb.write([node_address])
-    print(get_chain())
     return get_chain()
 
 
