@@ -1,6 +1,6 @@
 import datetime
 import json
-
+from database.database import PeersDb
 import requests
 from flask import render_template, redirect, request
 from flask import flash
@@ -8,7 +8,8 @@ from app import app
 
 # The node with which our application interacts, there can be multiple
 # such nodes as well.
-CONNECTED_SERVICE_ADDRESS = "http://127.0.0.1:8000"
+peerdb = PeersDb()
+CONNECTED_SERVICE_ADDRESS = peerdb.read()
 POLITICAL_PARTIES = ["Democratic Party","Republican Party","Socialist party"]
 VOTER_IDS=[
         'VOID001','VOID002','VOID003',
@@ -21,25 +22,34 @@ vote_check=[]
 
 posts = []
 
-
+# def vot_check():
+    
 def fetch_posts():
     """
     Function to fetch the chain from a blockchain node, parse the
     data and store it locally.
     """
-    get_chain_address = "{}/chain".format(CONNECTED_SERVICE_ADDRESS)
-    response = requests.get(get_chain_address)
-    if response.status_code == 200:
-        content = []
-        vote_count = []
-        chain = json.loads(response.content.decode(encoding="UTF-8"))
-        print(chain)
-        for block in chain['chain']:
-            for tx in block["transactions"]:
-                tx["index"] = block["index"]
-                tx["hash"] = block["previous_hash"]
-                content.append(tx)
-
+    current_len = 0
+    for node in CONNECTED_SERVICE_ADDRESS:
+        response = requests.get('{}/chain'.format(node))
+        length = response.json()['len']
+        chain = response.json()['chain']
+        if length > current_len:
+            current_len = length
+            longest_chain = chain
+        if longest_chain:
+            content = []
+            vote_count = []
+            chain = json.loads(response.content.decode(encoding="UTF-8"))
+            print(chain)
+            for block in chain['chain']:
+                for tx in block["transactions"]:
+                    tx["index"] = block["index"]
+                    tx["hash"] = block["previous_hash"]
+                    content.append(tx)
+                    if block['index'] !=0:
+                        if tx['voter_id'] not in vote_check:
+                            vote_check.append(tx['voter_id'])
 
         global posts
         posts = sorted(content, key=lambda k: k['timestamp'],
@@ -51,10 +61,9 @@ def index():
     fetch_posts()
 
     vote_gain = []
-
     for post in posts:
         vote_gain.append(post["party"])
-
+    print(vote_check)
     return render_template('index.html',
                            title='E-voting system '
                                  'using Blockchain and python',
@@ -86,15 +95,14 @@ def submit_textarea():
         return redirect('/')
     else:
         vote_check.append(voter_id)
-    # Submit a transaction
-    new_tx_address = "{}/new_transaction".format(CONNECTED_SERVICE_ADDRESS)
-
-    requests.post(new_tx_address,
-                  json=post_object,
-                  headers={'Content-type': 'application/json'})
-    # print(vote_check)
-    flash('Voted to '+party+' successfully!', 'success')
-    return redirect('/')
+        for node in CONNECTED_SERVICE_ADDRESS:
+            new_tx_address = "{}/new_transaction".format(node)
+            requests.post(new_tx_address,
+                    json=post_object,
+                    headers={'Content-type': 'application/json'})
+            print(vote_check)
+            flash('Voted to '+party+' successfully!', 'success')
+        return redirect('/')
 
 
 def timestamp_to_string(epoch_time):
