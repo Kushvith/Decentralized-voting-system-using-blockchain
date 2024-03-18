@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>User Registration</h2>
+    <form id="registrationForm" action="{{ url_for('register') }}" method="post">
+        {% if message %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endif %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" class="form-control" id="age" name="age" readonly>
+        </div>        
+        <div class="form-group">
+            <label for="pan">PAN Card Number:</label>
+            <input type="text" class="form-control" id="pan" name="pan" placeholder="Enter PAN card number" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <h2>Face Capture</h2>
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+        <input type="hidden" id="image_data_0" name="image_data[]" required>
+        <input type="hidden" id="image_data_1" name="image_data[]" required>
+        <input type="hidden" id="image_data_2" name="image_data[]" required>
+        <input type="hidden" id="image_data_3" name="image_data[]" required>
+        <button id="capture" type="button" class="btn btn-primary">Capture Photo</button>
+        <button id="captureNext" type="button" class="btn btn-primary" style="display:none;">Capture Next Photo</button>
+        <button type="submit" class="btn btn-primary" style="display:none;">Register</button>
+        <p class="bottom">Already Registered? <a class="bottom" href="{{ url_for('login') }}">Login here</a></p>
+    </form>
+</div>
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const captureButton = document.getElementById('capture');
+    const captureNextButton = document.getElementById('captureNext');
+    const registerButton = document.querySelector('form button[type="submit"]');
+    let captureEnabled = false;
+    let photoCount = 0;
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+        })
+        .catch(err => {
+            console.error('Error accessing webcam:', err);
+        });
+
+    captureButton.addEventListener('click', () => {
+        captureEnabled = true;
+    });
+
+    video.addEventListener('click', () => {
+        captureEnabled = true;
+    });
+
+    video.addEventListener('play', () => {
+        const canvasContext = canvas.getContext('2d');
+        setInterval(() => {
+            if (captureEnabled) {
+                canvasContext.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imageData = canvas.toDataURL('image/jpeg');
+                document.getElementById(`image_data_${photoCount}`).value = imageData;
+                captureEnabled = false;
+                photoCount++;
+                if (photoCount < 4) {
+                    captureButton.style.display = 'none';
+                    captureNextButton.style.display = 'block';
+                } else {
+                    captureButton.style.display = 'none';
+                    captureNextButton.style.display = 'none';
+                    registerButton.style.display = 'block';
+                }
+            }
+        }, 100);
+    });
+
+    captureNextButton.addEventListener('click', () => {
+        captureButton.style.display = 'block';
+        captureNextButton.style.display = 'none';
+    });
+        // Calculate age based on date of birth
+        document.getElementById('dob').addEventListener('change', function() {
+        const dob = new Date(this.value);
+        const today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+        const monthDiff = today.getMonth() - dob.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+            age--;
+        }
+        document.getElementById('age').value = age;
+    });
+</script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>User Registration</h2>
+    <form id="registrationForm" action="{{ url_for('register') }}" method="post">
+        {% if message %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endif %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" class="form-control" id="age" name="age"  min="18" readonly>
+        </div>
+        <div class="form-group">
+            <label for="pan">PAN Card Number:</label>
+            <input type="text" class="form-control" id="pan" name="pan" placeholder="Enter PAN card number" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <h2>Face Capture</h2>
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+        <input type="hidden" id="image_data_0" name="image_data[]" required>
+        <input type="hidden" id="image_data_1" name="image_data[]" required>
+        <input type="hidden" id="image_data_2" name="image_data[]" required>
+        <input type="hidden" id="image_data_3" name="image_data[]" required>
+        <button id="capture" type="button" class="btn btn-primary">Capture Photo</button>
+        <button id="captureNext" type="button" class="btn btn-primary" style="display:none;">Capture Next Photo</button>
+        <button type="submit" class="btn btn-primary" style="display:none;">Register</button>
+        <p class="bottom">Already Registered? <a class="bottom" href="{{ url_for('login') }}">Login here</a></p>
+    </form>
+</div>
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const captureButton = document.getElementById('capture');
+    const captureNextButton = document.getElementById('captureNext');
+    const registerButton = document.querySelector('form button[type="submit"]');
+    let captureEnabled = false;
+    let photoCount = 0;
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+        })
+        .catch(err => {
+            console.error('Error accessing webcam:', err);
+        });
+
+    captureButton.addEventListener('click', () => {
+        captureEnabled = true;
+    });
+
+    video.addEventListener('click', () => {
+        captureEnabled = true;
+    });
+
+    video.addEventListener('play', () => {
+        const canvasContext = canvas.getContext('2d');
+        setInterval(() => {
+            if (captureEnabled) {
+                canvasContext.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imageData = canvas.toDataURL('image/jpeg');
+                document.getElementById(`image_data_${photoCount}`).value = imageData;
+                captureEnabled = false;
+                photoCount++;
+                if (photoCount < 4) {
+                    captureButton.style.display = 'none';
+                    captureNextButton.style.display = 'block';
+                } else {
+                    captureButton.style.display = 'none';
+                    captureNextButton.style.display = 'none';
+                    registerButton.style.display = 'block';
+                }
+            }
+        }, 100);
+    });
+
+    captureNextButton.addEventListener('click', () => {
+        captureButton.style.display = 'block';
+        captureNextButton.style.display = 'none';
+    });
+        // Calculate age based on date of birth
+        document.getElementById('dob').addEventListener('change', function() {
+        const dob = new Date(this.value);
+        const today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+        const monthDiff = today.getMonth() - dob.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+            age--;
+        }
+        document.getElementById('age').value = age;
+    });
+</script>
+</body>
+</html> -->
