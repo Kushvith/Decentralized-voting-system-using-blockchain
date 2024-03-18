@@ -43,30 +43,33 @@ def fetch_posts():
         peerdb.write([new_url])
     current_len = 0
     for node in peerdb.read():
-        response = requests.get('{}/chain'.format(node))
-        print(response)
-        length = response.json()['len']
-        chain = response.json()['chain']
-        if length > current_len:
-            current_len = length
-            longest_chain = chain
-        if longest_chain:
-            content = []
-            vote_count = []
-            chain = json.loads(response.content.decode(encoding="UTF-8"))
-            for block in chain['chain']:
-                for tx in block["transactions"]:
-                    tx["index"] = block["index"]
-                    tx["hash"] = block["previous_hash"]
-                    content.append(tx)
-                    if block['index'] !=0:
-                        if tx['voter_id'] not in vote_check:
-                            print("vote_check",vote_check)
-                            vote_check.append(tx['voter_id'])
-            global posts
-            posts = sorted(content, key=lambda k: k['timestamp'],
-                   reverse=True)
-        
+        try:
+            response = requests.get('{}/chain'.format(node),timeout=3)
+            print(response)
+            length = response.json()['len']
+            chain = response.json()['chain']
+            if length > current_len:
+                current_len = length
+                longest_chain = chain
+            if longest_chain:
+                content = []
+                vote_count = []
+                chain = json.loads(response.content.decode(encoding="UTF-8"))
+                for block in chain['chain']:
+                    for tx in block["transactions"]:
+                        tx["index"] = block["index"]
+                        tx["hash"] = block["previous_hash"]
+                        content.append(tx)
+                        if block['index'] !=0:
+                            if tx['voter_id'] not in vote_check:
+                                print("vote_check",vote_check)
+                                vote_check.append(tx['voter_id'])
+                global posts
+                posts = sorted(content, key=lambda k: k['timestamp'],
+                    reverse=True)
+        except requests.exceptions.RequestException:
+            peerdb = PeersDb()
+            peerdb.remove_node(node)
             
 
         
