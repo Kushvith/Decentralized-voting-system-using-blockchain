@@ -28,7 +28,10 @@ class BaseDb:
     def remove_all(self):
         with open(self.filePath,'w+') as file:
             file.write('[]')
-         
+    def remove_node(self,addr):
+        data = self.read()
+        if addr in data:
+            data.remove(addr)
 
 class BlockChainDb(BaseDb):
     def __init__(self) -> None:

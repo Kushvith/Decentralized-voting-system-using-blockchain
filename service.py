@@ -148,6 +148,7 @@ app = Flask(__name__)
 # the node's copy of blockchain
 blockchain = Blockchain()
 blockchaindb = BlockChainDb()
+
 if not blockchaindb.lastBlock():
     blockchain.create_genesis_block()
 
