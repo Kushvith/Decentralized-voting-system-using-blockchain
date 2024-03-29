@@ -146,3 +146,125 @@ INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:33:35] "GET /register HTTP/1.1" 200 
 INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:33:52] "GET /register HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:34:37] "[32mPOST /register HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Mar/2024 17:34:37] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 114-089-652
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 10:38:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 10:38:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 10:39:01] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 10:39:01] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 10:39:01] "[33mGET /images/bg-1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 114-089-652
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 447-571-888
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:18:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:18:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:18:30] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:18:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:18:30] "[33mGET /images/bg-1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 447-571-888
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:27:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:27:48] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:27:48] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:27:48] "[33mGET /images/bg-1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:28:37] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:28:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:28:37] "[33mGET /images/bg-1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:31:02] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:31:07] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:31:13] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 11:32:16] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-486-906
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 12:10:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 12:10:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 12:10:11] "GET /register HTTP/1.1" 200 -
+ERROR:root:Error occurred: (2002, "Can't connect to server on 'localhost' (10061)")
+Traceback (most recent call last):
+  File "C:\Users\KH Jaideep\Desktop\Final project\Final\Decentralized-voting-system-using-blockchain\project\app.py", line 274, in register
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\KH Jaideep\AppData\Roaming\Python\Python312\site-packages\flask_mysqldb\__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "C:\Users\KH Jaideep\AppData\Roaming\Python\Python312\site-packages\flask_mysqldb\__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KH Jaideep\AppData\Roaming\Python\Python312\site-packages\MySQLdb\__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KH Jaideep\AppData\Roaming\Python\Python312\site-packages\MySQLdb\connections.py", line 195, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to server on 'localhost' (10061)")
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\MySQLdb\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\MySQLdb\\connections.py', reloading
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 12:11:14] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-486-906
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 12:12:07] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 12:12:46] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Mar/2024 12:12:46] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\json\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask_bcrypt.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\optionfiles.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\fabric\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\fabric\\connection.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\pooling.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\connection_cext.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\abstracts.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\catch23.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\connection.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\_typing\\_scalars.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\cursor.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\fabric\\caching.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\fabric\\balancing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\constants.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\charsets.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\cursor_cext.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\protocol.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\network.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\errors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\AppData\\Roaming\\Python\\Python312\\site-packages\\mysql\\connector\\conversion.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-486-906
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-486-906
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-486-906
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\KH Jaideep\\Desktop\\Final project\\Final\\Decentralized-voting-system-using-blockchain\\project\\dummy\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-486-906
