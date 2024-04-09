@@ -13,7 +13,7 @@ from datetime import datetime, date
 
 # Create Flask app
 app = Flask(__name__, static_folder='static')
-app.secret_key = 'your_secret_key_here'
+
 
 # Configure MySQL
 app.config['MYSQL_HOST'] = 'localhost'
