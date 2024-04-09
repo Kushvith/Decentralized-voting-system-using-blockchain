@@ -28,13 +28,33 @@ bcrypt = Bcrypt(app)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Function to encode a face image
+
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+
+def capture_face(image_data):
+    nparr = np.frombuffer(base64.b64decode(image_data.split(',')[1]), np.uint8)
+    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
+
+    if len(faces) == 0:
+        return None
+
+    (x, y, w, h) = faces[0]
+    face_img = img[y:y+h, x:x+w]
+
+    return face_img
+
+
+# # Function to encode a face image
 def encode_face(image):
     # Use a face recognition model or algorithm to encode the face
     # For example, you can use OpenCV's Haar cascades for face detection
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    faces = capture_face(gray)
     if len(faces) == 1:
         (x, y, w, h) = faces[0]
         face_roi = gray[y:y+h, x:x+w]
