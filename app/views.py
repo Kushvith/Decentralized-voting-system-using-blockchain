@@ -44,7 +44,6 @@ def fetch_posts():
     current_len = 0
     for node in peerdb.read():
         try:
-<<<<<<< HEAD
             print(node)
             response = requests.get('{}/chain'.format(node), timeout=3)
             print(f"{node} {response.content}")
@@ -74,35 +73,6 @@ def fetch_posts():
                 global posts
                 posts = sorted(content, key=lambda k: k.get('timestamp', 0), reverse=True)
     
-=======
-            response = requests.get('{}/chain'.format(node))
-            print(response.content)
-            if response:
-                length = response.json()['len']
-                chain = response.json()['chain']
-                if length > current_len:
-                    current_len = length
-                    longest_chain = chain
-                if longest_chain:
-                    content = []
-                    vote_count = []
-                    chain = json.loads(response.content.decode(encoding="UTF-8"))
-                    for block in chain['chain']:
-                        for tx in block["transactions"]:
-                            tx["index"] = block["index"]
-                            tx["hash"] = block["previous_hash"]
-                            content.append(tx)
-                            if block['index'] !=0:
-                                if tx['voter_id'] not in vote_check:
-                                    print("vote_check",vote_check)
-                                    vote_check.append(tx['voter_id'])
-                    global posts
-                    posts = sorted(content, key=lambda k: k['timestamp'],
-                        reverse=True)
-                else:
-                    peerdb = PeersDb()
-                    peerdb.remove_node(node)
->>>>>>> 0e8fae96268bf9fb986477cceb2a78ec88831ca6
         except requests.exceptions.RequestException:
             # If the node is not reachable, remove it from the peers database
             print("last nodes",node)

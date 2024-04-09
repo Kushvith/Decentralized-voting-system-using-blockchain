@@ -2,7 +2,7 @@ from hashlib import sha256
 import json
 import time
 
-from flask import Flask, request
+from flask import Flask, request,render_template
 import requests
 
 from database.database import BlockChainDb, PeersDb
@@ -176,7 +176,8 @@ def get_chain():
     blockchaindb = BlockChainDb()
     peer = PeersDb()
     #a = consensus()
-    return json.dumps({'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
+    # return json.dumps({'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
+    return render_template("chain.html",chain= {'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
    
 
 

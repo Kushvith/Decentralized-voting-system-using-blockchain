@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Chain</h1>
+    <p class="text-center">Total Blocks- {{ chain.len }}</p>
+    <div class="row">
+		{% for block in chain.chain %}
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center text-primary">Block - {{block.index}} </h1>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">
+                        <h6 class="text-primary">Nonce : {{block.nonce}} </h6>
+                        <hr class="divider" />
+                        <h6 class="text-primary">Previous-Hash : {{block.previous_hash}} </h6>
+                        <hr class="divider" />
+                        <h6 class="text-primary">Hash : {{block.hash}}</h6>
+                        <hr class="divider" />
+                        <h6 class="text-primary">Time-Stamp : {{block.timestamp}}</h6>
+                        <hr class="divider" />
+                    </div>
+                </div>
+            </div>
+            <i class="fa fa-arrow-right mx-3" style="font-size: 40px;" aria-hidden="true"></i>
+        </div>
+	{% endfor %}
+    </div>
+</div>
+{% endblock %}
