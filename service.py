@@ -176,10 +176,17 @@ def get_chain():
     blockchaindb = BlockChainDb()
     peer = PeersDb()
     #a = consensus()
+    return json.dumps({'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
+    # return render_template("chain.html",chain= {'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
+   
+@app.route('/chain_ui', methods=['GET'])
+def ui_chain():
+    blockchaindb = BlockChainDb()
+    peer = PeersDb()
+    #a = consensus()
     # return json.dumps({'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
     return render_template("chain.html",chain= {'len':len(blockchaindb.read()),'chain':blockchaindb.read(),'peers':peer.read()})
-   
-
+ 
 
 # endpoint to request the node to mine the unconfirmed
 # transactions (if any). We'll be using it to initiate
