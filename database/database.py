@@ -30,8 +30,13 @@ class BaseDb:
             file.write('[]')
     def remove_node(self,addr):
         data = self.read()
+        
         if addr in data:
-            data.remove(addr)
+            print(f"{data} {addr}")
+            data.remove(str(addr))
+            with open(self.filePath,"w+") as file:
+                file.write(json.dumps(data))
+
 
 class BlockChainDb(BaseDb):
     def __init__(self) -> None:
