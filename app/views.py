@@ -44,31 +44,38 @@ def fetch_posts():
     current_len = 0
     for node in peerdb.read():
         try:
-            response = requests.get('{}/chain'.format(node),timeout=3)
-            print(response)
-            length = response.json()['len']
-            chain = response.json()['chain']
+            print(node)
+            response = requests.get('{}/chain'.format(node), timeout=3)
+            print(f"{node} {response.content}")
+            length = response.json().get('len', 0)
+            chain = response.json().get('chain', [])
+            
             if length > current_len:
                 current_len = length
                 longest_chain = chain
+                
             if longest_chain:
                 content = []
                 vote_count = []
-                chain = json.loads(response.content.decode(encoding="UTF-8"))
-                for block in chain['chain']:
-                    for tx in block["transactions"]:
-                        tx["index"] = block["index"]
-                        tx["hash"] = block["previous_hash"]
+                chain = response.json().get('chain', [])
+                
+                for block in chain:
+                    for tx in block.get("transactions", []):
+                        tx["index"] = block.get("index")
+                        tx["hash"] = block.get("previous_hash")
                         content.append(tx)
-                        if block['index'] !=0:
-                            if tx['voter_id'] not in vote_check:
-                                print("vote_check",vote_check)
-                                vote_check.append(tx['voter_id'])
+                        
+                        if block.get('index', 0) != 0:
+                            if tx.get('voter_id') not in vote_check:
+                                print("vote_check", vote_check)
+                                vote_check.append(tx.get('voter_id'))
+                
                 global posts
-                posts = sorted(content, key=lambda k: k['timestamp'],
-                    reverse=True)
+                posts = sorted(content, key=lambda k: k.get('timestamp', 0), reverse=True)
+    
         except requests.exceptions.RequestException:
-            peerdb = PeersDb()
+            # If the node is not reachable, remove it from the peers database
+            print("last nodes",node)
             peerdb.remove_node(node)
             
 
@@ -79,7 +86,7 @@ def fetch_posts():
 @app.route('/')
 def index():
     fetch_posts()
-
+    print("fetching the post........")
     vote_gain = []
     for post in posts:
         vote_gain.append(post["party"])
