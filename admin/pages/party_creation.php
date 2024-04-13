@@ -42,7 +42,6 @@
               <table class="table align-items-center mb-0">
                 <thead>
                   <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">id</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Candidate name</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Party name
                     </th>
@@ -52,7 +51,7 @@
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder ">Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="mr-2">
 
                 </tbody>
               </table>
@@ -238,11 +237,23 @@
         $('.table_view').show()
         $('.form_party').hide()
       })
-      $('#create_party_form').click(function () {
+      function fetch(){
+      $.ajax({
+        method: 'GET',
+        url: "../php/party.php",
+        data: { "table": "table_data" },
+        success: function (data) {
+          $('tbody').html(data)
+        }
+      })
+    }
+    fetch()
+      $('#create_party_form').click(function (e) {
+        e.preventDefault()
         img = $('#Logo').val()
         age = $('#age').val()
         party = $('#party_name').val()
-        candidate = $('#candidate_name')
+        candidate = $('#candidate_name').val()
         if (img == "" || age == "" || party == "" || candidate == "") {
           alert("all feilds required")
         }
@@ -251,17 +262,26 @@
         }
         else {
           var formdata = new FormData()
-          var files = $('#customFile')[0].files;
+          var files = $('#Logo')[0].files;
           formdata.append("fileimg", files[0])
           formdata.append('age', age)
           formdata.append('party', party)
           formdata.append('candidate', candidate)
+          console.log(formdata)
           $.ajax({
-            url: "",
+            url: "../php/party.php",
             method: "post",
             data: formdata,
+            contentType: false,
+            processData: false,
+
             success: (data)=>{
               alert(data)
+              img = $('#Logo').val("")
+        age = $('#age').val("")
+        party = $('#party_name').val("")
+        candidate = $('#candidate_name').val("")
+              fetch()
             },
             error: (xhr, status, error) => {
               console.log(JSON.parse(xhr.responseText).message)
@@ -269,6 +289,13 @@
           })
 
         }
+      })
+      $(document).on('click','#delete',function() {
+        $.ajax({
+          url: "../php/party.php",
+          method:'POST',
+          data={"id":$(this).data('id')}
+        })
       })
     })
   </script>

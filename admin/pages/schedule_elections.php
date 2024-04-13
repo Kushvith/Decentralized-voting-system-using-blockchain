@@ -213,21 +213,49 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="party">
+          <div class="party_data">
 
           </div>
-         
+          <div class="select_party">
+            <div class="table-responsive p-0">
+              <table class="table align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Candidate name
+                    </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Party
+                      name
+                    </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Age
+                    </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Image
+                    </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder ">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="mr-2">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+
         </div>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -252,24 +280,99 @@
       $('.show_ele').show()
       $('.create_ele').hide()
     })
-   
+
     $(document).ready(function () {
-      
-   $(document).on("click",'.party-btn',function(){
-      var id = $(this).data("id")
-      $('.party').html(id)
-   })
-    function fetch(){
-      $.ajax({
-        method: 'GET',
-        url: "../php/election.php",
-        data: { "table": "table_data" },
-        success: function (data) {
-          $('tbody').html(data)
-        }
+   
+   
+
+      function fetch_checklist(id){
+           $.ajax({
+          method: "POST",
+          url: "../php/party.php",
+          data: { "party_candidate": "party_candidate", "par_id": id },
+          success: function (data) {
+            parse = JSON.parse(data)
+            console.log(parse)
+            $('.party_data').html('')
+            for (let index = 0; index < parse.length; index++) {
+              $('.party_data').append(
+                "<div class='form-check'><input id='checkbox' class='form-check-input' type='checkbox' value='" + parse[index][0] + "'/><label class='form-check-label'>" + parse[index][1] + " - " + parse[index][2] + "</label></div>"
+              )
+
+            }
+            $('.modal-footer').html('')
+            $('.modal-footer').append(' <button type="button" class="btn btn-primary" id="save_changes" data-id='+id+'>Save changes</button>')
+            fetch_party_election(id)
+          },
+          error: (xhr, status, error) => {
+            console.log(JSON.parse(xhr.responseText).message)
+          }
+        })
+      }
+       $(document).on("click", '.party-btn', function () {
+        var id = $(this).data("id")
+        fetch_checklist(id)
       })
-    }
-    fetch()
+      $(document).on('click', '#delete_modal', function () {
+        ele_id = $(this).data('ele')
+        party_id = $(this).data('id')
+        $.ajax({
+          method: "post",
+          url: "../php/party.php",
+          data: { "election_id": ele_id, "party_id": party_id },
+          success: function (data) {
+            fetch_checklist(ele_id)
+            fetch_party_election(ele_id)
+          }
+        })
+      })
+      $(document).on('click','#save_changes',function(){
+        id= $("#save_changes").data('id')
+        var checkeditem = []
+        $('#checkbox:checked').each(function () {
+          var value = $(this).val()
+          checkeditem.push(value)
+        })
+        $.ajax({
+          method:"post",
+          url:"../php/party.php",
+          data:{"ele_id": id,"par_up_id":checkeditem},
+          success:function(data){
+            if(data == 1){
+              fetch_checklist(id)
+              fetch_party_election(id)
+            }
+          }
+       
+        })
+      })
+      function fetch_party_election(id) {
+        $.ajax({
+          method: "POST",
+          url: "../php/party.php",
+          data: { "party_ele_table": id },
+          success: function (data) {
+            $('.select_party tbody').html(data)
+          },
+          error: (xhr, status, error) => {
+            console.log(JSON.parse(xhr.responseText).message)
+          }
+        })
+      }
+      function fetch() {
+        $.ajax({
+          method: 'GET',
+          url: "../php/election.php",
+          data: { "table": "table_data" },
+          success: function (data) {
+            $('tbody').html(data)
+          },
+          error: (xhr, status, error) => {
+            console.log(JSON.parse(xhr.responseText).message)
+          }
+        })
+      }
+      fetch()
       $('.create_election').click(function () {
         if ($('#name').val() == "" || $('#time').val() == "") {
           alert("All feilds required")

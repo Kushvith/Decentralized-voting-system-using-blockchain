@@ -1,4 +1,6 @@
 <?php
+   use Cloudinary\Configuration\Configuration;
+   use Cloudinary\Api\Upload\UploadApi;
     class connection
     {
         function pdoConnection(){
@@ -17,6 +19,16 @@
             }
             return $connection;
         }
+        static function cloudinary_configuration(){
+           
+        return Configuration::instance([
+             'cloud' => [
+            'cloud_name' => 'kushvith', 
+            'api_key' => '647897594938722', 
+            'api_secret' => 'kGd_3nWooLXiIxFW5kSWonWyIZI'],
+            'url' => [
+           'secure' => true]]);
+             }
     }
 
 ?>
