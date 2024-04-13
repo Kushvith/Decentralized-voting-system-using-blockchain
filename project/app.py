@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Import necessary libraries
 import os
 from flask import Flask, render_template, request, redirect, url_for, session
@@ -120,7 +119,11 @@ def register():
     return render_template('register.html', message=message)
 
 # Route for home page
+# Route for home page
 @app.route('/')
+def home():
+    return render_template('home.html')
+
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
 #     message = ''
@@ -182,8 +185,6 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-=======
->>>>>>> 8749b5d0940a02e42fd1762ec8c0f9ad971f7c46
 # # Import necessary libraries
 # import os
 # from flask import Flask, render_template, request, redirect, url_for, session

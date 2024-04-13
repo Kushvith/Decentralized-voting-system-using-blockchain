@@ -275,3 +275,40 @@ INFO:werkzeug: * Restarting with watchdog (windowsapi)
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 136-486-906
 >>>>>>> 8749b5d0940a02e42fd1762ec8c0f9ad971f7c46
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 618-860-823
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "[33mGET /assets/img/navbar-logo.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:07] "[33mGET /js/scripts.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/about/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/about/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/about/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/about/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/about/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:08] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:14] "[33mGET /login.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Apr/2024 07:13:17] "[33mGET /login.html HTTP/1.1[0m" 404 -
