@@ -1,5 +1,9 @@
 import datetime
 import json
+import logging
+import re
+from flask_mysqldb import MySQL
+import MySQLdb.cursors
 from database.database import PeersDb
 import requests
 from flask import render_template, redirect, request
@@ -9,7 +13,15 @@ from app import app
 
 # The node with which our application interacts, there can be multiple
 # such nodes as well.
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'decentralized'
+# Initialize MySQL
+mysql = MySQL(app)
 
+# Configure logging
+logging.basicConfig(filename='app.log', level=logging.DEBUG)
 POLITICAL_PARTIES = ["Democratic Party","Republican Party","Socialist party"]
 VOTER_IDS=[
         'VOID001','VOID002','VOID003',
@@ -79,11 +91,47 @@ def fetch_posts():
             peerdb.remove_node(node)
             
 
-        
+def validate_pan_card(pan_number):
+    pattern = r'^[A-Z]{5}[0-9]{4}[A-Z]$'
+    if re.match(pattern, pan_number):
+        return True
+    else:
+        return False       
 
+@app.route('/signup',methods=['GET','POST'])
+def signup():
+    message = ""
+    if request.method == "POST":
+        firstname = request.form['first_name']
+        lastname = request.form['last_name']
+        email = request.form['email']
+        phno = request.form['phone']
+        password = request.form['password']
+        confirm_password = request.form['confirm_password']
+        pan = request.form['pan_no']
+        age = request.form['age']
+        dob = request.form['dob']
+        gender = request.form['gender']
+        image_data_list = request.form.getlist('image_data[]')
+        if password != confirm_password:
+            message = "password should match"
+        elif int(age) < 18:
+            message = "age should be equal or greater than 18"
+        # elif not validate_pan_card(pan):
+        #     message = "enter the valid pan number"
+        else:
+          try:
+            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            cursor.execute('SELECT * FROM user WHERE email = %s OR pan = %s', (email, pan))
+            account = cursor.fetchone()
+            if account:
+                message = 'Account already exists!'
+          except Exception as e:
+                message = 'An error occurred while processing your request.'
+                logging.exception("Error occurred: %s", str(e))
+    return render_template("signup.html",message=message)
 
-
-@app.route('/')
+@app.route('/')  
 def index():
     fetch_posts()
     print("fetching the post........")
