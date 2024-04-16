@@ -72,7 +72,7 @@ def testdb():
         cursor.execute('SELECT * FROM election')
         account = cursor.fetchone() 
         if account:
-            message = account
+            message = "account"
         else:
             message= "error in fetching db"
     except Exception as e:
