@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2024 at 06:45 AM
+-- Generation Time: Apr 16, 2024 at 02:59 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -134,6 +134,23 @@ INSERT INTO `staff_login` (`id`, `name`, `email`, `password`, `type`) VALUES
 (1, 'kushvith', 'kushvith@staff.com', '1', 0),
 (2, 'user', 'user@staff.com', '1', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `voters`
+--
+
+CREATE TABLE `voters` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `email` varchar(70) NOT NULL,
+  `phone` int(12) NOT NULL,
+  `password` varchar(60) NOT NULL,
+  `pan` int(14) NOT NULL,
+  `dob` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -176,6 +193,12 @@ ALTER TABLE `staff_login`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `voters`
+--
+ALTER TABLE `voters`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -183,7 +206,7 @@ ALTER TABLE `staff_login`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -208,6 +231,12 @@ ALTER TABLE `party`
 --
 ALTER TABLE `staff_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `voters`
+--
+ALTER TABLE `voters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
