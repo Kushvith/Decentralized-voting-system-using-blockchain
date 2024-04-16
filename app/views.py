@@ -1,9 +1,14 @@
+import base64
 import datetime
 import json
 import logging
+import os
 import re
+import uuid
+import cv2
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
+import numpy as np
 from database.database import PeersDb
 import requests
 from flask import render_template, redirect, request
@@ -104,13 +109,27 @@ def testdb():
         cursor.execute('SELECT * FROM election')
         account = cursor.fetchone() 
         if account:
-            message = account
+            message = "account"
         else:
             message= "error in fetching db"
     except Exception as e:
             message = f'An error occurred while processing your request.'
             logging.exception("Error occurred: %s", str(e))   
     return json.dumps({"message":message})
+def save_uploaded_images(image_data_list, username):
+    image_paths = []
+    for i, image_data in enumerate(image_data_list):
+        nparr = np.frombuffer(base64.b64decode(image_data.split(',')[1]), np.uint8)
+        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+
+        if not os.path.exists('uploads/' + username):
+            os.makedirs('uploads/' + username)
+
+        filename = str(uuid.uuid4()) + '.jpg'
+        filepath = os.path.join('uploads', username, filename)
+        cv2.imwrite(filepath, img)
+        image_paths.append(filepath)
+    return image_paths
 @app.route('/signup',methods=['GET','POST'])
 def signup():
     message = ""
@@ -130,8 +149,8 @@ def signup():
             message = "password should match"
         elif int(age) < 18:
             message = "age should be equal or greater than 18"
-        # elif not validate_pan_card(pan):
-        #     message = "enter the valid pan number"
+        elif not validate_pan_card(pan):
+            message = "enter the valid pan number"
         else:
           try:
             cursor = mysql.connection.cursor()
@@ -140,7 +159,10 @@ def signup():
             if account:
                 message = 'Account already exists!'
             else:
-                message = 'create account here' 
+                image_paths = save_uploaded_images(image_data_list, email)
+                cursor.execute('INSERT INTO `voters` (`first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s)',(firstname,lastname,email,phno,password,pan,dob))
+                mysql.connection.commit()
+                message = 'You have successfully registered!'
           except Exception as e:
                 message = f'An error occurred while processing your request.'
                 logging.exception("Error occurred: %s", str(e))

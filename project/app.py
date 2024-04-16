@@ -24,8 +24,10 @@ app.config['MYSQL_DB'] = 'decentralized'
 # Initialize MySQL
 mysql = MySQL(app)
 
+
 # Configure logging
 logging.basicConfig(filename='app.log', level=logging.DEBUG)
+logging.exception("mysql: %s", str(mysql))   
 
 # Function to validate PAN card number
 def validate_pan_card(pan_number):
@@ -70,14 +72,18 @@ def testdb():
     try:
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM election')
-        account = cursor.fetchone() 
+        account = cursor.fetchone()
         if account:
-            message = account
+            message = "account"
         else:
-            message= "error in fetching db"
+            message = "No data found in the 'election' table."
     except Exception as e:
-            message = f'An error occurred while processing your request.'
-            logging.exception("Error occurred: %s", str(e))   
+        message = f'An error occurred while processing your request: {str(e)}'
+        logging.exception("Error occurred: %s", str(e))
+    finally:
+        if 'cursor' in locals() and cursor:
+            cursor.close()
+
     return json.dumps({"message":message})
 # Function to calculate age from date of birth
 def calculate_age(birth_date):
