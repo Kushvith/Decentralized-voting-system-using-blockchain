@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Import necessary libraries
 import os
 from flask import Flask, render_template, request, redirect, url_for, session
@@ -11,7 +10,7 @@ import base64
 import numpy as np
 import cv2
 from datetime import datetime, date
-
+import json
 # Create Flask app
 app = Flask(__name__, static_folder='static')
 
@@ -20,7 +19,7 @@ app = Flask(__name__, static_folder='static')
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'userdata'
+app.config['MYSQL_DB'] = 'decentralized'
 
 # Initialize MySQL
 mysql = MySQL(app)
@@ -66,7 +65,20 @@ def save_uploaded_images(image_data_list, username):
         cv2.imwrite(filepath, img)
         image_paths.append(filepath)
     return image_paths
-
+@app.route('/test_db',methods=['GET'])
+def testdb():
+    try:
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT * FROM election')
+        account = cursor.fetchone() 
+        if account:
+            message = account
+        else:
+            message= "error in fetching db"
+    except Exception as e:
+            message = f'An error occurred while processing your request.'
+            logging.exception("Error occurred: %s", str(e))   
+    return json.dumps({"message":message})
 # Function to calculate age from date of birth
 def calculate_age(birth_date):
     today = date.today()
@@ -120,7 +132,11 @@ def register():
     return render_template('register.html', message=message)
 
 # Route for home page
+# Route for home page
 @app.route('/')
+def home():
+    return render_template('home.html')
+
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
 #     message = ''
@@ -182,8 +198,6 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-=======
->>>>>>> 8749b5d0940a02e42fd1762ec8c0f9ad971f7c46
 # # Import necessary libraries
 # import os
 # from flask import Flask, render_template, request, redirect, url_for, session
