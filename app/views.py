@@ -97,7 +97,20 @@ def validate_pan_card(pan_number):
         return True
     else:
         return False       
-
+@app.route('/test_db',methods=['GET'])
+def testdb():
+    try:
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT * FROM election')
+        account = cursor.fetchone() 
+        if account:
+            message = account
+        else:
+            message= "error in fetching db"
+    except Exception as e:
+            message = f'An error occurred while processing your request.'
+            logging.exception("Error occurred: %s", str(e))   
+    return json.dumps({"message":message})
 @app.route('/signup',methods=['GET','POST'])
 def signup():
     message = ""
@@ -121,13 +134,15 @@ def signup():
         #     message = "enter the valid pan number"
         else:
           try:
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor.execute('SELECT * FROM user WHERE email = %s OR pan = %s', (email, pan))
+            cursor = mysql.connection.cursor()
+            cursor.execute('SELECT * FROM voters WHERE email = %s OR pan = %s', (email, pan))
             account = cursor.fetchone()
             if account:
                 message = 'Account already exists!'
+            else:
+                message = 'create account here' 
           except Exception as e:
-                message = 'An error occurred while processing your request.'
+                message = f'An error occurred while processing your request.'
                 logging.exception("Error occurred: %s", str(e))
     return render_template("signup.html",message=message)
 
@@ -183,3 +198,4 @@ def submit_textarea():
 
 def timestamp_to_string(epoch_time):
     return datetime.datetime.fromtimestamp(epoch_time).strftime('%Y-%m-%d %H:%M')
+ 
