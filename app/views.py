@@ -1,5 +1,6 @@
 import base64
 import datetime
+import hashlib
 import json
 import logging
 import os
@@ -11,29 +12,28 @@ import MySQLdb.cursors
 import numpy as np
 from database.database import PeersDb
 import requests
-from flask import render_template, redirect, request
+from flask import render_template, redirect, request,session,url_for
 from flask import flash
 import urllib.parse
 from app import app
-
+from datetime import date
+from sklearn.neighbors import KNeighborsClassifier
+import pandas as pd
+import joblib
 # The node with which our application interacts, there can be multiple
 # such nodes as well.
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'decentralized'
+app.secret_key = "this_my_secreat_key_cant_be_cracked_by_anyone"
 # Initialize MySQL
 mysql = MySQL(app)
 
 # Configure logging
 logging.basicConfig(filename='app.log', level=logging.DEBUG)
-POLITICAL_PARTIES = ["Democratic Party","Republican Party","Socialist party"]
-VOTER_IDS=[
-        'VOID001','VOID002','VOID003',
-        'VOID004','VOID005','VOID006',
-        'VOID007','VOID008','VOID009',
-        'VOID010','VOID011','VOID012',
-        'VOID013','VOID014','VOID015']
+# Use the default Haar cascade XML file for face detection
+face_detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 vote_check=[]
 
@@ -51,7 +51,7 @@ def fetch_posts():
 
     new_port = 8000
 
-    parsed_url = parsed_url._replace(netloc=parsed_url.netloc.replace(':5000', ':' + str(new_port)))
+    parsed_url = parsed_url._replace(netloc=parsed_url.netloc.replace(':5000', ':' + str(new_port)),scheme='http')
 
     new_url = urllib.parse.urlunparse(parsed_url)
 
@@ -109,27 +109,165 @@ def testdb():
         cursor.execute('SELECT * FROM election')
         account = cursor.fetchone() 
         if account:
-            message = "account"
+            message = account['name']
         else:
             message= "error in fetching db"
     except Exception as e:
             message = f'An error occurred while processing your request.'
             logging.exception("Error occurred: %s", str(e))   
     return json.dumps({"message":message})
+
+def extract_face(frame):
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_detector.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+    print(len(faces))
+    if len(faces) > 0:
+        (x, y, w, h) = faces[0]
+        face = frame[y:y+h, x:x+w]
+        return face
+    else:
+        return None
+
+def extract_faces(img):
+    try:
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        face_points = face_detector.detectMultiScale(gray, 1.2, 5, minSize=(20, 20))
+        
+        return face_points
+    except Exception as e:
+        print(f"Error in extract_faces: {e}")
+        return img
+
+def crop_faces(img, face_points):
+    cropped_faces = []
+    for (x, y, w, h) in face_points:
+        face = img[y:y+h, x:x+w]
+        cropped_faces.append(face)
+    return cropped_faces
+def train_model():
+    faces = []
+    labels = []
+    userlist = os.listdir('uploads/')
+    for user in userlist:
+        for imgname in os.listdir(f'uploads/{user}'):
+            img = cv2.imread(f'uploads/{user}/{imgname}')
+            resized_face = cv2.resize(img, (50, 50))
+            faces.append(resized_face.ravel())
+            labels.append(user)
+    faces = np.array(faces)
+    knn = KNeighborsClassifier(n_neighbors=5)
+    knn.fit(faces, labels)
+    joblib.dump(knn, 'static/face_recognition_model.pkl')
+    print("training completed")
+    
+def identify_face(facearray):
+    model = joblib.load('static/face_recognition_model.pkl')
+    return model.predict(facearray)
+
 def save_uploaded_images(image_data_list, username):
     image_paths = []
     for i, image_data in enumerate(image_data_list):
         nparr = np.frombuffer(base64.b64decode(image_data.split(',')[1]), np.uint8)
         img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        detected_faces = extract_faces(img)
+        if len(detected_faces) == 0:
+            print(f"No faces found in image {i}")
+            continue  # Skip saving if no faces found in this image
 
+        cropped_faces = crop_faces(img, detected_faces)
         if not os.path.exists('uploads/' + username):
             os.makedirs('uploads/' + username)
 
-        filename = str(uuid.uuid4()) + '.jpg'
-        filepath = os.path.join('uploads', username, filename)
-        cv2.imwrite(filepath, img)
-        image_paths.append(filepath)
+        for face_index, face_img in enumerate(cropped_faces):
+            filename = f"{username}_{i}_{face_index}.jpg"
+            filepath = os.path.join('uploads', username, filename)
+            cv2.imwrite(filepath, face_img)
+            image_paths.append(filepath)
     return image_paths
+@app.route('/logout')
+def logout():
+    session.clear()  
+    return redirect(url_for('login'))
+@app.route('/login',methods=['GET','POST'])
+def login():
+    message = ""
+    if request.method == "POST":
+        email = request.form['email']
+        password = request.form['password']
+        image_data_list = request.form['image_data[]']
+        try:
+            cursor = mysql.connection.cursor()
+            cursor.execute('SELECT * FROM voters WHERE email = %s AND password = %s AND status = 1', (email, password))
+            account = cursor.fetchone()
+            if account:
+                train_model()
+                print("accouny login")
+                nparr = np.frombuffer(base64.b64decode(image_data_list.split(',')[1]), np.uint8)
+                img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+                detected_face = extract_face(img)
+                
+                if detected_face is not None:
+                    print("face detected")
+                    (x, y, w, h) = extract_faces(img)[0]
+                    face = cv2.resize(img[y:y+h, x:x+w], (50, 50))
+                    identified_person = identify_face(face.reshape(1, -1))[0]
+                    print(identified_person)
+                    if identified_person == email:
+                        print("signed up successfull")        
+                        session['email']= email
+                        print(str(account))
+                        session['minmat'] = account[8]
+                        return redirect(url_for('home'))
+                    else:
+                        print("face not matched")
+                        message="face not matched try coming to light"
+                else:
+                    print("face not found")
+                    message = "Face not found in the image"
+            else:
+                message = 'Email and password are incorrect'
+        except Exception as e:
+            message = f'An error occurred while processing your request.'
+            logging.exception("Error occurred: %s", str(e))        
+    return render_template("login.html",message=message) 
+
+@app.route('/home',methods=['GET','POST'])
+def home():
+    message = ""
+    electionMSg = []
+    fetch_posts()
+    print("fetching the post........")
+    vote_gain = []
+    party = []
+    print(session.get("email"))
+    if not session.get("email"):
+        return redirect(url_for("signup"))
+    for post in posts:
+        vote_gain.append(post["party"])
+    cursor = mysql.connection.cursor()
+    today_date = date.today()
+    cursor.execute("SELECT * FROM election WHERE time_election = %s", (today_date,))
+    election = cursor.fetchone()
+    if election:
+        election_id = str(election[0])
+        cursor.execute("SELECT * FROM `election_party` INNER JOIN election ON election.id = election_party.election_id INNER JOIN party ON party.id = election_party.party_id WHERE election_party.election_id = %s",(election_id))
+        party_data = cursor.fetchall()
+        for party_row in party_data:
+            party_dict = {
+                "election_name":party_row[3],
+                "party_id":party_row[7],
+                "party_name":party_row[8],
+                "age":party_row[10],
+                "image":party_row[11]
+            }
+            party.append(party_dict)
+        
+        
+    else:
+        message = "No Election Today Checkout the Announcement"
+    print(vote_check)
+    return render_template("home.html",message=message,electionMSg=party)
+    
 @app.route('/signup',methods=['GET','POST'])
 def signup():
     message = ""
@@ -145,12 +283,13 @@ def signup():
         dob = request.form['dob']
         gender = request.form['gender']
         image_data_list = request.form.getlist('image_data[]')
+        minmat_add = hashlib.sha256(email.encode()).hexdigest()
         if password != confirm_password:
             message = "password should match"
         elif int(age) < 18:
             message = "age should be equal or greater than 18"
-        elif not validate_pan_card(pan):
-            message = "enter the valid pan number"
+        # elif not validate_pan_card(pan):
+        #     message = "enter the valid pan number"
         else:
           try:
             cursor = mysql.connection.cursor()
@@ -160,9 +299,13 @@ def signup():
                 message = 'Account already exists!'
             else:
                 image_paths = save_uploaded_images(image_data_list, email)
-                cursor.execute('INSERT INTO `voters` (`first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`) VALUES (%s,%s,%s,%s,%s,%s,%s)',(firstname,lastname,email,phno,password,pan,dob))
-                mysql.connection.commit()
-                message = 'You have successfully registered!'
+                print(len(image_paths))
+                if(len(image_paths) > 1):
+                    cursor.execute('INSERT INTO `voters` (`first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`,`minmat_add`,`status`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%d)',(firstname,lastname,email,phno,password,pan,dob,minmat_add,0))
+                    mysql.connection.commit()
+                    message = 'You have successfully registered! and please wait for verification'
+                else:
+                    message = "Make sure your face is visible properly"
           except Exception as e:
                 message = f'An error occurred while processing your request.'
                 logging.exception("Error occurred: %s", str(e))
@@ -170,43 +313,34 @@ def signup():
 
 @app.route('/')  
 def index():
-    fetch_posts()
-    print("fetching the post........")
-    vote_gain = []
-    for post in posts:
-        vote_gain.append(post["party"])
-    print(vote_check)
-    return render_template('index.html',
-                           title='E-voting system '
-                                 'using Blockchain and python',
-                           posts=posts,
-                           vote_gain=vote_gain,
-                           node_address="",
-                           readable_time=timestamp_to_string,
-                           political_parties=POLITICAL_PARTIES,
-                           voter_ids=VOTER_IDS)
+    return render_template('index.html')
 
 
 @app.route('/submit', methods=['POST'])
 def submit_textarea():
+    VOTER_ID = []
     """
     Endpoint to create a new transaction via our application.
     """
+    message = ""
     party = request.form["party"]
     voter_id = request.form["voter_id"]
-
     post_object = {
         'voter_id': voter_id,
         'party': party,
     }
     peerdb = PeersDb()
-    
-    if voter_id not in VOTER_IDS:
-        flash('Voter ID invalid, please select voter ID from sample!', 'error')
-        return redirect('/')
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM voters')
+    account = cursor.fetchall()
+    for row in account:
+        VOTER_ID.append(row[8])
+    if voter_id not in VOTER_ID:
+        message = 'Voter ID invalid, please select voter ID from sample!'
+        return render_template('home.html',message=message)
     if voter_id in vote_check:
-        flash('Voter ID ('+voter_id+') already vote, Vote can be done by unique vote ID only once!', 'error')
-        return redirect('/')
+        message = 'Voter ID ('+voter_id+') already vote, Vote can be done by unique vote ID only once!'
+        return render_template('home.html',message=message)
     else:
         for node in peerdb.read():
             new_tx_address = "{}/new_transaction".format(node)
@@ -214,8 +348,8 @@ def submit_textarea():
                     json=post_object,
                     headers={'Content-type': 'application/json'})
             vote_check.append(voter_id)
-            flash('Voted to '+party+' successfully!', 'success')
-        return redirect('/')
+            message = 'Voted to '+party+' successfully!'
+        return render_template('home.html',message=message)
 
 
 def timestamp_to_string(epoch_time):
