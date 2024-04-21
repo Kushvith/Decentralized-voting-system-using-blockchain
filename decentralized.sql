@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2024 at 02:59 PM
+-- Generation Time: Apr 21, 2024 at 12:33 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -66,7 +66,7 @@ CREATE TABLE `election` (
 --
 
 INSERT INTO `election` (`id`, `name`, `time_election`, `time_creation`, `status`) VALUES
-(7, 'm', '2024-03-19', '2024-03-19 10:58:21.802945', 'prnding'),
+(7, 'm', '2024-04-21', '2024-04-21 09:38:44.064194', 'prnding'),
 (8, 'm', '2024-04-07', '2024-04-06 09:54:34.035481', 'prnding');
 
 -- --------------------------------------------------------
@@ -148,8 +148,19 @@ CREATE TABLE `voters` (
   `phone` int(12) NOT NULL,
   `password` varchar(60) NOT NULL,
   `pan` int(14) NOT NULL,
-  `dob` date NOT NULL
+  `dob` date NOT NULL,
+  `minmat_add` varchar(200) NOT NULL,
+  `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `voters`
+--
+
+INSERT INTO `voters` (`id`, `first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`, `minmat_add`, `status`) VALUES
+(7, 'kushvith', 'Yr', 'kushvithchinna900@gmail.com', 2147483647, '1', 1, '2001-02-21', '123445', 1),
+(8, 'jaideep', 'kh', 'harshavardhanharsha25112002@gmail.com', 2147483647, '1', 2, '2001-06-20', '234333', 1),
+(9, 'c', 'd', 'c@gg.com', 1, '1', 5, '2003-06-20', '132243', 1);
 
 --
 -- Indexes for dumped tables
@@ -236,7 +247,7 @@ ALTER TABLE `staff_login`
 -- AUTO_INCREMENT for table `voters`
 --
 ALTER TABLE `voters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
