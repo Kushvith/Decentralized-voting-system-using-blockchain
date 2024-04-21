@@ -454,3 +454,7 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): 192.168.29.201:8
 INFO:werkzeug:192.168.29.201 - - [21/Apr/2024 15:12:43] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:192.168.29.201 - - [21/Apr/2024 15:12:43] "GET /static/css/homestyles.css HTTP/1.1" 200 -
 INFO:werkzeug:192.168.29.201 - - [21/Apr/2024 15:12:43] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-601-268
