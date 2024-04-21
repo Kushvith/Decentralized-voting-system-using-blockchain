@@ -2654,3 +2654,6 @@ INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\flask\\ctx.
 INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\flask\\logging.py', reloading
 INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\flask\\testing.py', reloading
 INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
