@@ -230,6 +230,39 @@ def login():
             message = f'An error occurred while processing your request.'
             logging.exception("Error occurred: %s", str(e))        
     return render_template("login.html",message=message) 
+def today_parties():
+    party = []
+    cursor = mysql.connection.cursor()
+    today_date = date.today()
+    cursor.execute("SELECT * FROM election WHERE time_election = %s", (today_date,))
+    election = cursor.fetchone()
+    if election:
+        election_id = str(election[0])
+        cursor.execute("SELECT * FROM `election_party` INNER JOIN election ON election.id = election_party.election_id INNER JOIN party ON party.id = election_party.party_id WHERE election_party.election_id = %s",(election_id))
+        party_data = cursor.fetchall()
+        for party_row in party_data:
+            print(str(party_row))
+            party_dict = {
+                "election_name":party_row[3],
+                "party_id":party_row[7],
+                "party_name":party_row[8],
+                "candidate_name":party_row[9],
+                "age":party_row[10],
+                "image":party_row[11]
+            }
+            party.append(party_dict)
+    return party
+@app.route('/contact',methods=['POST'])
+def contact():
+    name = request.form['username']
+    email = request.form['email']
+    phone = request.form['phone']
+    message = request.form['message']
+    cursor = mysql.connection.cursor()
+    cursor.execute('INSERT INTO `contact` ( `name`, `email`, `phone`, `message`) VALUES (%s, %s, %s, %s)',(name,email,phone,message))
+    mysql.connection.commit()
+    return render_template("index.html",message=1)
+   
 
 @app.route('/home',methods=['GET','POST'])
 def home():
@@ -244,26 +277,8 @@ def home():
         return redirect(url_for("signup"))
     for post in posts:
         vote_gain.append(post["party"])
-    cursor = mysql.connection.cursor()
-    today_date = date.today()
-    cursor.execute("SELECT * FROM election WHERE time_election = %s", (today_date,))
-    election = cursor.fetchone()
-    if election:
-        election_id = str(election[0])
-        cursor.execute("SELECT * FROM `election_party` INNER JOIN election ON election.id = election_party.election_id INNER JOIN party ON party.id = election_party.party_id WHERE election_party.election_id = %s",(election_id))
-        party_data = cursor.fetchall()
-        for party_row in party_data:
-            party_dict = {
-                "election_name":party_row[3],
-                "party_id":party_row[7],
-                "party_name":party_row[8],
-                "age":party_row[10],
-                "image":party_row[11]
-            }
-            party.append(party_dict)
-        
-        
-    else:
+    party = today_parties()
+    if not party:
         message = "No Election Today Checkout the Announcement"
     print(vote_check)
     return render_template("home.html",message=message,electionMSg=party)
@@ -301,7 +316,7 @@ def signup():
                 image_paths = save_uploaded_images(image_data_list, email)
                 print(len(image_paths))
                 if(len(image_paths) > 1):
-                    cursor.execute('INSERT INTO `voters` (`first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`,`minmat_add`,`status`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%d)',(firstname,lastname,email,phno,password,pan,dob,minmat_add,0))
+                    cursor.execute('INSERT INTO `voters` (`first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`,`minmat_add`,`status`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)',(firstname,lastname,email,phno,password,pan,dob,minmat_add,0))
                     mysql.connection.commit()
                     message = 'You have successfully registered! and please wait for verification'
                 else:
@@ -314,8 +329,35 @@ def signup():
 @app.route('/')  
 def index():
     return render_template('index.html')
-
-
+def format_date(date):
+    dt_object = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
+    formatted_date = dt_object.strftime("%b %d %Y")
+    return formatted_date
+@app.route('/announcement')
+def announce():
+    annouce = []
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM announcement')
+    account = cursor.fetchall()
+    for row in account:
+        print(row)
+        row_item = {
+            "date": format_date(str(row[2])),
+            "message":row[1]
+        }
+        annouce.append(row_item)
+    return render_template('announcement.html',annouce=annouce)
+@app.route('/results')
+def results():
+    message = ""
+    vote_gain = []
+    fetch_posts()
+    for post in posts:
+        vote_gain.append(post["party"])
+    party = today_parties()
+    if not party:
+        message = "Today No Elections Sheduled"
+    return render_template("results.html",message=message,political_parties=party,vote_gain=vote_gain)
 @app.route('/submit', methods=['POST'])
 def submit_textarea():
     VOTER_ID = []

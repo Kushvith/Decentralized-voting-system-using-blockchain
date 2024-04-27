@@ -56,7 +56,7 @@ class Election
         return $table;
     }
 }
-$connectionObj = new connection();
+$connectionObj = new DatabaseConnection();
 $connection = $connectionObj->mysqlConnection();
 $election = new Election($connection);
 if (isset ($_POST['election_name'])) {

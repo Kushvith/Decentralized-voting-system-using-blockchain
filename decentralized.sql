@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2024 at 12:33 PM
+-- Generation Time: Apr 27, 2024 at 07:23 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -33,6 +33,14 @@ CREATE TABLE `announcement` (
   `time_stamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `announcement`
+--
+
+INSERT INTO `announcement` (`id`, `message`, `time_stamp`) VALUES
+(7, 'hi', '2024-04-21 15:33:54'),
+(8, 'hi 2', '2024-04-21 15:34:01');
+
 -- --------------------------------------------------------
 
 --
@@ -43,9 +51,18 @@ CREATE TABLE `contact` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `phone` int(13) NOT NULL,
   `message` varchar(300) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `phone`, `message`, `timestamp`) VALUES
+(2, 'admin', 'kushvith@gmail.com', 1234, 'testing 1', '2024-04-23 11:04:30'),
+(3, 'kushvith', 'kushvith@gmail.com', 1234, 'sfsfdsfds', '2024-04-23 11:12:13');
 
 -- --------------------------------------------------------
 
@@ -66,7 +83,7 @@ CREATE TABLE `election` (
 --
 
 INSERT INTO `election` (`id`, `name`, `time_election`, `time_creation`, `status`) VALUES
-(7, 'm', '2024-04-21', '2024-04-21 09:38:44.064194', 'prnding'),
+(7, 'm', '2024-04-22', '2024-04-22 07:33:35.940092', 'prnding'),
 (8, 'm', '2024-04-07', '2024-04-06 09:54:34.035481', 'prnding');
 
 -- --------------------------------------------------------
@@ -86,7 +103,6 @@ CREATE TABLE `election_party` (
 
 INSERT INTO `election_party` (`election_id`, `party_id`) VALUES
 (7, 1),
-(7, 2),
 (8, 1);
 
 -- --------------------------------------------------------
@@ -109,8 +125,7 @@ CREATE TABLE `party` (
 --
 
 INSERT INTO `party` (`id`, `name`, `candidate_name`, `age`, `url`, `publicid`) VALUES
-(1, 'sd', '[object Object]', 23, 'https://res.cloudinary.com/kushvith/image/upload/v1712752219/party/rb2ryjadcuuptrm29kas.jpg', 'party/rb2ryjadcuuptrm29kas'),
-(2, 'dsdfddsf', 'adafe', 19, '', '');
+(1, 'sd', 'abc', 23, 'https://res.cloudinary.com/kushvith/image/upload/v1712752219/party/rb2ryjadcuuptrm29kas.jpg', 'party/rb2ryjadcuuptrm29kas');
 
 -- --------------------------------------------------------
 
@@ -159,7 +174,6 @@ CREATE TABLE `voters` (
 
 INSERT INTO `voters` (`id`, `first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`, `minmat_add`, `status`) VALUES
 (7, 'kushvith', 'Yr', 'kushvithchinna900@gmail.com', 2147483647, '1', 1, '2001-02-21', '123445', 1),
-(8, 'jaideep', 'kh', 'harshavardhanharsha25112002@gmail.com', 2147483647, '1', 2, '2001-06-20', '234333', 1),
 (9, 'c', 'd', 'c@gg.com', 1, '1', 5, '2003-06-20', '132243', 1);
 
 --
@@ -217,13 +231,13 @@ ALTER TABLE `voters`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `election`

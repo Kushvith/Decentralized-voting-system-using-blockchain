@@ -1,0 +1,972 @@
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\__pycache__\\netrc.cpython-39.pyc', reloading
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\__pycache__\\shlex.cpython-39.pyc', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:10:56] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:07] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:08] "[37mGET /static/css/signup.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:08] "[37mGET /static/js/login.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:24] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:24] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:24] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:24] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:24] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:24] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:25] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 16:12:26] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\encodings\\__pycache__\\unicode_escape.cpython-39.pyc', reloading
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:55:16] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:55:16] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:55:22] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:24] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:24] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:24] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:24] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:24] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:24] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:24] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:25] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:26] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:26] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:26] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:26] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:56:26] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:22] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:23] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:23] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:23] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:23] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:24] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:24] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:24] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:24] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:24] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:24] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:24] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:25] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:26] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:48] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:49] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:50] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:57:50] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:02] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:03] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:03] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:34] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:34] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:34] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:34] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:34] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:34] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:34] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:35] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:35] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:35] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:35] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:58:59] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:59:45] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:59:45] "[37mGET /static/css/signup.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:59:46] "[37mGET /static/js/login.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 20:59:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:01:22] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:01:23] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:01:23] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:17] "[35m[1mGET /announcement HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:18] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:18] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:18] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:19] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:19] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:19] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:39] "[35m[1mGET /announcement HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:39] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:40] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:40] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:40] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:41] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:09:41] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:03] "[35m[1mGET /announcement HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:03] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:03] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:03] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:03] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:04] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:04] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:19] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:19] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:10:19] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\__pycache__\\connections.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\constants\\__pycache__\\CLIENT.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\__pycache__\\converters.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\constants\\__pycache__\\FLAG.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\_strptime.py', reloading
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:20:32] "[35m[1mGET /announcement HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:20:33] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:20:37] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:20:37] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:06] "[35m[1mGET /announcement HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:06] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:07] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:07] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:08] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:08] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:08] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:43] "[35m[1mGET /announcement HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:44] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:44] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:44] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:45] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:45] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:21:45] "[37mGET /announcement?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:02] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:02] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:03] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:26] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:26] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:27] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:55] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:22:55] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:23:26] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:23:26] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:37] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:37] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:37] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:47] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:48] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:48] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:57] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:24:57] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:25:11] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:25:11] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:25:12] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:09] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:10] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:10] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:22] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:22] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:23] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:53] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:53] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:26:53] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:27:34] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:27:34] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:27:34] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:28:56] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:28:56] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:28:57] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:29:46] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:29:47] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:29:47] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:30:09] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:30:09] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:30:10] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:30:50] "[37mGET /announcement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:30:51] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:30:51] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\werkzeug\\http.py', reloading
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:36:57] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:36:58] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:36:58] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:37:33] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:37:33] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:37:33] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:40:24] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:40:25] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 21:40:25] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\__pycache__\\netrc.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\__pycache__\\shlex.cpython-39.pyc', reloading
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\encodings\\__pycache__\\unicode_escape.cpython-39.pyc', reloading
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:01:39] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:01:39] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\__pycache__\\plistlib.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\xml\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\xml\\parsers\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\xml\\parsers\\__pycache__\\expat.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\extern\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\text\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__pycache__\\functools.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__pycache__\\more.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__pycache__\\recipes.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__pycache__\\context.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\api.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\version.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\windows.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\version.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_structures.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\specifiers.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\utils.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\tags.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_manylinux.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_elffile.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_musllinux.cpython-39.pyc', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\runpy.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\flask\\cli.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:03:27] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:03:27] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:03:28] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:04:36] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:04:36] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:04:37] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:05:15] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:05:16] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:05:16] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:06:34] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:06:34] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:06:35] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:07:40] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:07:41] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:07:41] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\flask\\_compat.py', reloading
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:29] "[35m[1mGET /results HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:30] "[37mGET /results?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:30] "[37mGET /results?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:30] "[37mGET /results?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:48] "[35m[1mGET /results HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:48] "[37mGET /results?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:49] "[37mGET /results?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:49] "[37mGET /results?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:49] "[37mGET /results?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:49] "[37mGET /results?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:09:50] "[37mGET /results?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:10:12] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:10:12] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:10:13] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:11:16] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:11:16] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2024 22:11:17] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.5:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 605-597-715
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:02:22] "GET /results HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:02:22] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:02:23] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:02:23] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:02:32] "GET /results HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:02:32] "[36mGET /static/css/homestyles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:02:33] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:05:14] "GET /results HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:05:15] "[36mGET /static/css/homestyles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:05:15] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:05:27] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:05:28] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:05:28] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:05:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:root:Error occurred: tuple index out of range
+Traceback (most recent call last):
+  File "E:\xampp1\htdocs\decentralized_voting\app\views.py", line 211, in login
+    (x, y, w, h) = extract_faces(img)[0]
+IndexError: tuple index out of range
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:06:01] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:06:02] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:06:02] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:07:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:07:20] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:22] "[33mGET //chain HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 404 232
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\json\\decoder.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\requests\\models.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\json\\__init__.py', reloading
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:22] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:29] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:35] "[33mGET //chain HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 404 232
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:35] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:35] "[37mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:36] "[37mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:36] "[37mGET /home?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:15:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:03] "[33mGET //chain HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 404 232
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:03] "[35m[1mGET /results HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:03] "[37mGET /results?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:04] "[37mGET /results?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:04] "[37mGET /results?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:04] "[37mGET /results?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:04] "[37mGET /results?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:05] "[37mGET /results?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:47] "[33mGET /chain_ui HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:16:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\__pycache__\\connections.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\constants\\__pycache__\\CLIENT.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\__pycache__\\converters.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\constants\\__pycache__\\FLAG.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\jinja2\\__pycache__\\debug.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\jinja2\\environment.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\jinja2\\loaders.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\jinja2\\_compat.py', reloading
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:18:03] "[35m[1mGET /results HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:18:03] "[37mGET /results?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 322-522-515
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:18:31] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:18:32] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:18:32] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET //chain HTTP/1.1" 200 530
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:21:02] "[37mGET /results HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:21:03] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:21:03] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:31] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:31] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:32] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:32] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:32] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:32] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:32] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:32] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:32] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:33] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:42] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:43] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:43] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:43] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:43] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:43] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:43] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:43] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:44] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:44] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:23:44] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:32] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:33] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:33] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:39:33] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:15] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:15] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:15] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:15] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:15] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:15] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:15] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:16] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:16] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:16] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:16] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:16] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:27] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2024 13:40:28] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\encodings\\__pycache__\\unicode_escape.cpython-39.pyc', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:32] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:32] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:32] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:32] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:32] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:33] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:34] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:34] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:34] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:34] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:34] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:34] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\flask\\__pycache__\\debughelpers.cpython-39.pyc', reloading
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:56] "[35m[1mPOST /contact HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:56] "[37mGET /contact?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:56] "[37mGET /contact?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:25:56] "[37mGET /contact?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:00] "[37mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\email\\__init__.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:47] "[35m[1mPOST /contact HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:49] "[37mGET /contact?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:49] "[37mGET /contact?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:49] "[37mGET /contact?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:49] "[37mGET /contact?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:49] "[37mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:49] "[37mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:59] "[35m[1mPOST /contact HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:59] "[37mGET /contact?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:59] "[37mGET /contact?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:59] "[37mGET /contact?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:59] "[37mGET /contact?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:59] "[37mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:26:59] "[37mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:19] "[31m[1mGET /contact HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:27] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:47] "[35m[1mPOST /contact HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:47] "[37mGET /contact?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:47] "[37mGET /contact?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:47] "[37mGET /contact?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:47] "[37mGET /contact?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:47] "[37mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:27:47] "[37mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:28:09] "[31m[1mGET /contact HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\__pycache__\\connections.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\constants\\__pycache__\\CLIENT.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\__pycache__\\converters.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\MySQLdb\\constants\\__pycache__\\FLAG.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\jinja2\\environment.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\jinja2\\loaders.py', reloading
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:28:14] "[35m[1mPOST /contact HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.pyc', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[37mPOST /contact HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:34:30] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:56] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:56] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:56] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:56] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:56] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[37mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[37mGET /static/assets/img/portfolio/1.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[37mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[37mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[37mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[37mGET /static/css/homestyles.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[37mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:57] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:58] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:58] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:58] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:58] "[37mGET /static/assets/img/map-image.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:41:58] "[37mGET /static/assets/img/header-bg.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[37mPOST /contact HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:42:13] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\__pycache__\\plistlib.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\xml\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\xml\\parsers\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\xml\\parsers\\__pycache__\\expat.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\extern\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\text\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__pycache__\\functools.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__pycache__\\more.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__pycache__\\recipes.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__pycache__\\context.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\api.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\version.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__pycache__\\windows.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\__init__.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\version.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_structures.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\specifiers.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\utils.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\tags.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_manylinux.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_elffile.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_musllinux.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\requirements.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_parser.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\_tokenizer.cpython-39.pyc', reloading
+INFO:werkzeug: * Detected change in 'E:\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__pycache__\\markers.cpython-39.pyc', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Running on http://192.168.0.24:8000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:52:13] "[33mGET /chain_ui HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:52:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.24 - - [23/Apr/2024 16:52:19] "[33mGET /chain_ui HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\__pycache__\\service.cpython-39.pyc', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 197-685-730
+INFO:werkzeug: * Running on https://0.0.0.0:5000/ (Press CTRL+C to quit)

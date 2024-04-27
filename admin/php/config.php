@@ -1,7 +1,7 @@
 <?php
    use Cloudinary\Configuration\Configuration;
    use Cloudinary\Api\Upload\UploadApi;
-    class connection
+    class DatabaseConnection
     {
         function pdoConnection(){
             try{

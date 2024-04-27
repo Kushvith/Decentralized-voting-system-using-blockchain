@@ -19,7 +19,6 @@
     </div>
 {% else %}
     <div class="container mt-5">
-        {{electionMSg}} 
         <h1 class="text-center text-primary">{{electionMSg[0].election_name}}</h1>
         <form action="{{url_for('submit_textarea')}}" method="post">
         <div class="row">

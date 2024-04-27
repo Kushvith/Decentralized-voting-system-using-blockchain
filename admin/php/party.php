@@ -9,7 +9,7 @@ require_once 'vendor/autoload.php';
         private $mysqlconnection;
         function __construct(mysqli $connection){
             $this->mysqlconnection = $connection;
-            $cloudinaryConfig = connection::cloudinary_configuration();
+            $cloudinaryConfig = DatabaseConnection::cloudinary_configuration();
             $this->cloudinary = new UploadApi($cloudinaryConfig);
         }
         function createparty($candidate,$party,$age,$filename){
@@ -96,7 +96,7 @@ require_once 'vendor/autoload.php';
            
         }
     }
-    $connectionObj = new connection();
+    $connectionObj = new DatabaseConnection();
     $connection = $connectionObj->mysqlConnection();
     $party = new party($connection);
     if(isset($_POST['age'])){

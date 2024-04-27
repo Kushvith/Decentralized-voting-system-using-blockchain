@@ -37,7 +37,7 @@ include("./jwt.php");
         }
     }
     include("./config.php");
-    $connectionObj = new connection();
+    $connectionObj = new DatabaseConnection();
     $connection = $connectionObj->pdoConnection();
     if(isset($_POST['email'])){
        $signin = new Signin($connection);
