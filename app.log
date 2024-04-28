@@ -1792,3 +1792,140 @@ INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\s
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 118-160-760
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.101:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 118-160-760
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET /static/assets/img/portfolio/1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET /static/assets/img/about/1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET /static/assets/img/about/2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET /static/assets/img/about/3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET /static/assets/img/about/4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "GET /static/assets/img/about/5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/team/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/team/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/team/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:03] "[33mGET /assets/img/portfolio/1.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "[33mGET /assets/img/close-icon.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "[33mGET /assets/img/portfolio/2.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "[33mGET /assets/img/portfolio/3.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "[33mGET /assets/img/portfolio/4.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "[33mGET /assets/img/portfolio/5.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "[33mGET /assets/img/portfolio/6.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "GET /static/assets/img/header-bg.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "GET /static/assets/img/map-image.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:04] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:08] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:08] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:08] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 2156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "GET /chain HTTP/1.1" 200 2182
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:28] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:28:38] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:46] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:46] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:46] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:46] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/assets/img/about/2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/assets/img/about/1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/assets/img/about/3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/assets/img/about/4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/assets/img/about/5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/assets/img/header-bg.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:35:55] "GET /static/assets/img/map-image.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:00] "[33mGET /index.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:14] "[36mGET /static/css/homestyles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:14] "[36mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:14] "[36mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:14] "[36mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:14] "[36mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:14] "[36mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:40] "[36mGET /static/css/homestyles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:40] "[36mGET /static/assets/img/about/2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:40] "[36mGET /static/assets/img/about/1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:40] "[36mGET /static/assets/img/about/4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:40] "[36mGET /static/assets/img/about/3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:40] "[36mGET /static/assets/img/about/5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:36:46] "[33mGET /results.html HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 2156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "GET /chain HTTP/1.1" 200 2182
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:10] "GET /results HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:10] "[36mGET /static/css/homestyles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:10] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:21] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:21] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:21] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:27] "[33mGET /results.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:30] "[33mGET /results.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:37:33] "[33mGET /results.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:52:58] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:52:58] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:52:58] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:53:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 2156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:53:16] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 2127
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //clean_data HTTP/1.1" 200 7
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 15:57:47] "GET /fetch_results?callback=jQuery3710443041641296541_1714300063940&_=1714300063941 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:08:49] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.101:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 118-160-760
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 252
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "GET //chain HTTP/1.1" 200 252
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:09:21] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "POST //new_transaction HTTP/1.1" 201 7
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "POST //new_transaction HTTP/1.1" 201 7
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:09:24] "POST /submit HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 569
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "GET //chain HTTP/1.1" 200 569
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //clean_data HTTP/1.1" 200 7
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "GET //clean_data HTTP/1.1" 200 7
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:10:27] "GET /fetch_results?callback=jQuery37106033801997774444_1714300823295&_=1714300823296 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 118-160-760
+INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 118-160-760
