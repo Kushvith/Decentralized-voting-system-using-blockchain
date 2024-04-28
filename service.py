@@ -2,7 +2,7 @@ from hashlib import sha256
 import json
 import time
 
-from flask import Flask, request,render_template
+from flask import Flask, redirect, request,render_template, url_for
 import requests
 
 from database.database import BlockChainDb, PeersDb
@@ -167,7 +167,11 @@ def new_transaction():
 
     return "Success", 201
 
-
+@app.route('/clean_data', methods=['GET'])
+def clean_data():
+    block = BlockChainDb()
+    block.remove_data()
+    return "cleared",200 
 # endpoint to return the node's copy of the chain.
 # Our application will be using this endpoint to query
 # all the posts to display.
@@ -191,11 +195,14 @@ def ui_chain():
 # endpoint to request the node to mine the unconfirmed
 # transactions (if any). We'll be using it to initiate
 # a command to mine from our application itself.
+
 @app.route('/mine', methods=['GET'])
 def mine_unconfirmed_transactions():
     result = blockchain.mine()
+    length = len(blockchain.unconfirmed_transactions)
+    message = ""
     if not result:
-        return "No transactions to mine"
+        message = "No transactions to mine"
     else:
         blockchaindb = BlockChainDb()
         # Making sure we have the longest chain before announcing to the network
@@ -204,7 +211,17 @@ def mine_unconfirmed_transactions():
         if chain_length == len(blockchaindb.read()):
             # announce the recently mined block to the network
             announce_new_block(blockchain.last_block())
-        return "Block #{} is mined.".format(blockchain.last_block()['index'])
+        message = "Block #{} is mined.".format(blockchain.last_block()['index'])
+        # Redirect to /minedash with parameters length and message
+        return redirect(url_for('mine_unconfirm', length=length, message=message))
+
+@app.route('/minedash', methods=['GET'])
+def mine_unconfirm():
+    length = request.args.get('length') 
+    if not length:
+        length = len(blockchain.unconfirmed_transactions)
+    message = request.args.get('message') 
+    return render_template("mine.html", length=int(length), message=message)
 
 @app.route("/register_node",methods=['POST'])
 def register_new_node():
@@ -221,7 +238,7 @@ def register_new_node():
 
 
 
-@app.route('/register_with', methods=['POST'])
+@app.route('/register_with', methods=['GET','POST'])
 def register_with_existing_node():
     """
     Internally calls the `register_node` endpoint to
@@ -229,25 +246,26 @@ def register_with_existing_node():
     request, and sync the blockchain as well as peer data.
     """
     peerdb = PeersDb()
-    
-    node_address = request.get_json()["node_address"]
-    if node_address not in peerdb.read():
-        peerdb.write([node_address])
-    if not node_address:
-        return "Invalid data", 400
-    if request.host_url not in peerdb.read():
-        peerdb.write([request.host_url])
-    data = {"node_address":node_address,"host_url":request.host_url}
-    headers={'Content-Type':"application/json"}
-    response = requests.post(node_address+"/register_node",data=json.dumps(data),headers=headers)
+    if request.method == "POST":
+        node_address = request.get_json()["node_address"]
+        if node_address not in peerdb.read():
+            peerdb.write([node_address])
+        if not node_address:
+            return "Invalid data", 400
+        if request.host_url not in peerdb.read():
+            peerdb.write([request.host_url])
+        data = {"node_address":node_address,"host_url":request.host_url}
+        headers={'Content-Type':"application/json"}
+        response = requests.post(node_address+"/register_node",data=json.dumps(data),headers=headers)
     # update(node_address)
     
-    if response.status_code == 200:
-        chain_dump = response.json()['chain']
-        
-        blockchain = create_chain_from_dump(chain_dump)
-                                             
-        return "Registration successful", 200
+        if response.status_code == 200:
+            chain_dump = response.json()['chain']
+            
+            blockchain = create_chain_from_dump(chain_dump)
+                                                
+            return "Registration successful", 200
+    return render_template('peers.html')
 
 def create_chain_from_dump(chain_dump):
     blockchaindb = BlockChainDb()

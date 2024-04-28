@@ -28,6 +28,10 @@ class BaseDb:
     def remove_all(self):
         with open(self.filePath,'w+') as file:
             file.write('[]')
+            
+    def remove_data(self):
+        with open(self.filePath,'w+') as file:
+            file.write('[{"index": 0, "transactions": [], "timestamp": 0, "previous_hash": "0", "nonce": 0, "hash": "6dbf23122cb5046cc5c0c1b245c75f8e43c59ca8ffeac292715e5078e631d0c9"}]')
     def remove_node(self,addr):
         data = self.read()
         

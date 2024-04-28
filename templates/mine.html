@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center text-primary">Miner</h1>
+    {% if message %}
+        <div class="alert alert-success">
+            <h4 class="text-primary">{{message}}</h4>
+        </div>
+    {% endif %}
+    <h4 class="text-danger">total unverified transaction: {{length}}</h4>
+    {% if length > 0 %}
+    <a href="{{ url_for('mine_unconfirmed_transactions') }}" class="btn btn-success">Mine</a>
+    {% endif %}
+</div>
+<script>
+    setTimeout(function() {
+        history.replaceState({}, document.title, window.location.pathname);
+        location.reload();
+    }, 15000); 
+</script>
+{% endblock %}

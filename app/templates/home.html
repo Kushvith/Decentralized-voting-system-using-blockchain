@@ -20,10 +20,11 @@
 {% else %}
     <div class="container mt-5">
         <h1 class="text-center text-primary">{{electionMSg[0].election_name}}</h1>
-        <form action="{{url_for('submit_textarea')}}" method="post">
+   
         <div class="row">
             {% for party in electionMSg %}
            <div class="col-xs-12 col-sm-6 col-md-4">
+            <form action="{{url_for('submit_textarea')}}" method="post">
             <div class="card">
                 <div class="card-header">
                     <div class="img-resposive text-center">
@@ -40,7 +41,9 @@
                     <button type="submit" class="btn btn-success btn-lg">VOTE HERE</button>
                 </div>
             </div>
+             </form>
            </div>
+        
            {% endfor %}
         </div>
        
@@ -48,7 +51,7 @@
  
     </div>
 {% endif %}
-    </form>
+ 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="

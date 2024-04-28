@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 col-sm-12 offset-lg-4">
+            <div class="card p-5">
+                <div class="card-heading">
+                    <h1 class="text-center mt-3">Peer connection</h1>
+                </div>
+                <div class="card-body">
+                    <form action="">
+                        <div class="form-group mt-2">
+                            <label for="node_address">node address</label>
+                            <input type="text" placeholder="192.168.0.0" name="node_address" id="node_address" class="form-control mt-2">
+                        </div>
+                        <input type="submit" class="btn btn-success mt-2" value="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -12,7 +12,7 @@ import MySQLdb.cursors
 import numpy as np
 from database.database import PeersDb
 import requests
-from flask import render_template, redirect, request,session,url_for
+from flask import jsonify, render_template, redirect, request,session,url_for
 from flask import flash
 import urllib.parse
 from app import app
@@ -20,6 +20,7 @@ from datetime import date
 from sklearn.neighbors import KNeighborsClassifier
 import pandas as pd
 import joblib
+from flask_cors import CORS
 # The node with which our application interacts, there can be multiple
 # such nodes as well.
 app.config['MYSQL_HOST'] = 'localhost'
@@ -29,7 +30,8 @@ app.config['MYSQL_DB'] = 'decentralized'
 app.secret_key = "this_my_secreat_key_cant_be_cracked_by_anyone"
 # Initialize MySQL
 mysql = MySQL(app)
-
+app.config['DEBUG'] = True
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 # Configure logging
 logging.basicConfig(filename='app.log', level=logging.DEBUG)
 # Use the default Haar cascade XML file for face detection
@@ -230,11 +232,15 @@ def login():
             message = f'An error occurred while processing your request.'
             logging.exception("Error occurred: %s", str(e))        
     return render_template("login.html",message=message) 
-def today_parties():
+def today_parties(is_vote=False):
     party = []
     cursor = mysql.connection.cursor()
     today_date = date.today()
-    cursor.execute("SELECT * FROM election WHERE time_election = %s", (today_date,))
+    query = f"""
+    SELECT * FROM election 
+    WHERE time_election = %s {'AND status = "pending"' if is_vote else ''}
+    """
+    cursor.execute(query, (today_date,))
     election = cursor.fetchone()
     if election:
         election_id = str(election[0])
@@ -243,7 +249,9 @@ def today_parties():
         for party_row in party_data:
             print(str(party_row))
             party_dict = {
+                "election_id":party_row[0],
                 "election_name":party_row[3],
+                "status":party_row[6],
                 "party_id":party_row[7],
                 "party_name":party_row[8],
                 "candidate_name":party_row[9],
@@ -263,7 +271,42 @@ def contact():
     mysql.connection.commit()
     return render_template("index.html",message=1)
    
+@app.route('/fetch_results',methods=['GET'])
+def fetchResults():
+    cursor = mysql.connection.cursor()
+    vote_gain = []
+    fetch_posts()
+    for post in posts:
+        vote_gain.append(post["party"])
+    party = today_parties()
+    print(party)
 
+    party_name_counts = {party_item["party_name"]: 0 for party_item in party}
+
+    for party_name in vote_gain:
+        if party_name in party_name_counts:
+            party_name_counts[party_name] += 1
+        else:
+            party_name_counts[party_name] = 1
+    cursor.execute("UPDATE `election` SET `status`='completed' WHERE id = %s",(party[0]['election_id'],))
+    mysql.connection.commit()
+    for name,res in party_name_counts.items():
+        cursor.execute('INSERT INTO `results`(`party_name`, `election`, `result`) VALUES (%s,%s,%s)',(name,party[0]['election_id'],res))
+        mysql.connection.commit()
+    cursor.close()
+    peer = PeersDb()
+    for p in peer.read():
+        response = requests.get('{}/clean_data'.format(p), timeout=3)
+        if response.status_code == 200:
+            continue
+    data = {"message": "Success"}
+    callback = request.args.get('callback')
+    if callback:
+        jsonp_response = f"{callback}({jsonify(data).data.decode('utf-8')})"
+        return jsonp_response, 200, {'Content-Type': 'application/javascript'}
+    else:
+        return jsonify(data), 200
+    
 @app.route('/home',methods=['GET','POST'])
 def home():
     message = ""
@@ -277,7 +320,7 @@ def home():
         return redirect(url_for("signup"))
     for post in posts:
         vote_gain.append(post["party"])
-    party = today_parties()
+    party = today_parties(is_vote=True)
     if not party:
         message = "No Election Today Checkout the Announcement"
     print(vote_check)

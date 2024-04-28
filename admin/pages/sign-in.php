@@ -92,7 +92,8 @@
       if($.cookie('token')&&$.cookie('role')=="staff"){
         window.location.href = "./dashboard.php";
       }
-      $('#submit-btn').click(function(){
+      $('#submit-btn').click(function(e){
+        e.preventDefault()
         var name = $('input[name="email"]').val()
         var password = $('input[name="password"]').val()
         if(name=="" || password==""){
@@ -104,13 +105,7 @@
             data:$('#login_form').serialize(),
             success:(data)=>{
               if(JSON.parse(data).token){
-                let dt2 = new Date();
-                dt2 = new Date(dt2.getTime() + 60 * 60 * 1000)
-                $.cookie("token", JSON.parse(data).token, {expires: dt2, secure: true});
-                $.cookie("role", JSON.parse(data).role, {expires: dt2, secure: true})
-                if($.cookie('role')=="staff"){
                   window.location.href = "./dashboard.php";
-                }
               }
             },
             error:(xhr,status,error)=>{
