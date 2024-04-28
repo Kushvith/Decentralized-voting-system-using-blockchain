@@ -1,0 +1,4 @@
+SELECT host, user FROM mysql.user WHERE user = 'user';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY 'your_password' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
