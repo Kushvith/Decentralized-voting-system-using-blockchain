@@ -7,9 +7,12 @@
             <div class="card p-5">
                 <div class="card-heading">
                     <h1 class="text-center mt-3">Peer connection</h1>
+                    {% if message %}
+                        <div class="alert alert-success">{{message}}</div>
+                    {% endif %}
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form action="{{url_for('register_with_existing_node')}}" method="post">
                         <div class="form-group mt-2">
                             <label for="node_address">node address</label>
                             <input type="text" placeholder="192.168.0.0" name="node_address" id="node_address" class="form-control mt-2">
