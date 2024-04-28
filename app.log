@@ -1929,3 +1929,29 @@ INFO:werkzeug: * Detected change in 'E:\\xampp1\\htdocs\\decentralized_voting\\a
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 118-160-760
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.101:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 118-160-760
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 252
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "GET //chain HTTP/1.1" 200 252
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:13:30] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:13:31] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:13:31] "GET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:13:31] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:13:31] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.101:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.101:8000 "GET //chain HTTP/1.1" 200 252
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.106:8000
+DEBUG:urllib3.connectionpool:http://192.168.1.106:8000 "GET //chain HTTP/1.1" 200 252
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:15:28] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:15:28] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:15:28] "[36mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:15:28] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.101 - - [28/Apr/2024 16:15:28] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
