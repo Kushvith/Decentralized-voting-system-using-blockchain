@@ -21,3 +21,5 @@ INFO:werkzeug: * Debugger PIN: 357-703-180
 INFO:werkzeug:192.168.1.106 - - [28/Apr/2024 15:54:12] "POST /login HTTP/1.1" 200 -
 INFO:werkzeug:192.168.1.106 - - [28/Apr/2024 15:54:12] "GET /static/css/signup.css HTTP/1.1" 200 -
 INFO:werkzeug:192.168.1.106 - - [28/Apr/2024 15:54:12] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\service.py', reloading
+INFO:werkzeug: * Restarting with stat
