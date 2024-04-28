@@ -245,9 +245,10 @@ def register_with_existing_node():
     register current node with the node specified in the
     request, and sync the blockchain as well as peer data.
     """
+    message = ""
     peerdb = PeersDb()
     if request.method == "POST":
-        node_address = request.get_json()["node_address"]
+        node_address = request.form["node_address"]
         if node_address not in peerdb.read():
             peerdb.write([node_address])
         if not node_address:
@@ -264,8 +265,8 @@ def register_with_existing_node():
             
             blockchain = create_chain_from_dump(chain_dump)
                                                 
-            return "Registration successful", 200
-    return render_template('peers.html')
+            message = "Registration successful" 
+    return render_template('peers.html',message=message)
 
 def create_chain_from_dump(chain_dump):
     blockchaindb = BlockChainDb()

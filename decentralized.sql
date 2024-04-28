@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2024 at 07:23 AM
+-- Generation Time: Apr 28, 2024 at 11:21 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -83,8 +83,8 @@ CREATE TABLE `election` (
 --
 
 INSERT INTO `election` (`id`, `name`, `time_election`, `time_creation`, `status`) VALUES
-(7, 'm', '2024-04-22', '2024-04-22 07:33:35.940092', 'prnding'),
-(8, 'm', '2024-04-07', '2024-04-06 09:54:34.035481', 'prnding');
+(7, 'm', '2024-04-28', '2024-04-28 07:25:44.088713', 'pending'),
+(8, 'm', '2024-04-07', '2024-04-27 13:53:37.792573', 'pending');
 
 -- --------------------------------------------------------
 
@@ -103,7 +103,8 @@ CREATE TABLE `election_party` (
 
 INSERT INTO `election_party` (`election_id`, `party_id`) VALUES
 (7, 1),
-(8, 1);
+(8, 1),
+(7, 3);
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,29 @@ CREATE TABLE `party` (
 --
 
 INSERT INTO `party` (`id`, `name`, `candidate_name`, `age`, `url`, `publicid`) VALUES
-(1, 'sd', 'abc', 23, 'https://res.cloudinary.com/kushvith/image/upload/v1712752219/party/rb2ryjadcuuptrm29kas.jpg', 'party/rb2ryjadcuuptrm29kas');
+(1, 'sd', 'abc', 23, 'https://res.cloudinary.com/kushvith/image/upload/v1712752219/party/rb2ryjadcuuptrm29kas.jpg', 'party/rb2ryjadcuuptrm29kas'),
+(3, 'kushvith', 'adafe', 19, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `results`
+--
+
+CREATE TABLE `results` (
+  `id` int(11) NOT NULL,
+  `party_name` varchar(30) NOT NULL,
+  `election` int(11) NOT NULL,
+  `result` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `results`
+--
+
+INSERT INTO `results` (`id`, `party_name`, `election`, `result`) VALUES
+(35, 'sd', 7, 0),
+(36, 'kushvith', 7, 1);
 
 -- --------------------------------------------------------
 
@@ -173,7 +196,7 @@ CREATE TABLE `voters` (
 --
 
 INSERT INTO `voters` (`id`, `first_name`, `last_name`, `email`, `phone`, `password`, `pan`, `dob`, `minmat_add`, `status`) VALUES
-(7, 'kushvith', 'Yr', 'kushvithchinna900@gmail.com', 2147483647, '1', 1, '2001-02-21', '123445', 1),
+(7, 'kushvith', 'Yr', 'kushvithchinna900@gmail.com', 2147483647, '1', 1, '2001-02-21', '1234456', 1),
 (9, 'c', 'd', 'c@gg.com', 1, '1', 5, '2003-06-20', '132243', 1);
 
 --
@@ -202,14 +225,22 @@ ALTER TABLE `election`
 -- Indexes for table `election_party`
 --
 ALTER TABLE `election_party`
-  ADD KEY `party_id` (`party_id`),
-  ADD KEY `election_id` (`election_id`);
+  ADD KEY `election_id` (`election_id`),
+  ADD KEY `party_id` (`party_id`);
 
 --
 -- Indexes for table `party`
 --
 ALTER TABLE `party`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `results`
+--
+ALTER TABLE `results`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `election_results_id` (`election`),
+  ADD KEY `party_election_id` (`party_name`);
 
 --
 -- Indexes for table `staff_login`
@@ -249,7 +280,13 @@ ALTER TABLE `election`
 -- AUTO_INCREMENT for table `party`
 --
 ALTER TABLE `party`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `results`
+--
+ALTER TABLE `results`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `staff_login`
@@ -272,7 +309,13 @@ ALTER TABLE `voters`
 --
 ALTER TABLE `election_party`
   ADD CONSTRAINT `election_id` FOREIGN KEY (`election_id`) REFERENCES `election` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `party_id` FOREIGN KEY (`party_id`) REFERENCES `party` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `party_id` FOREIGN KEY (`party_id`) REFERENCES `party` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `results`
+--
+ALTER TABLE `results`
+  ADD CONSTRAINT `election_results_id` FOREIGN KEY (`election`) REFERENCES `election` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
