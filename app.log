@@ -995,3 +995,29 @@ INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:24:48] "POST /signup HTTP/1.1" 
 INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:24:49] "GET /static/css/signup.css HTTP/1.1" 200 -
 INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:24:49] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
 INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 137-601-268
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:35] "POST /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:35] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:35] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:50] "POST /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:50] "[36mGET /static/css/signup.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:50] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:56] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:56] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:26:56] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:27:40] "POST /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:27:40] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:27:40] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:28:55] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:28:55] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:28:55] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:07] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:07] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:07] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.43.165:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:31] "GET /home HTTP/1.1" 200 -
