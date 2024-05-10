@@ -109,7 +109,7 @@
               }
             },
             error:(xhr,status,error)=>{
-              console.log(JSON.parse(xhr.responseText).message)
+              alert(JSON.parse(xhr.responseText).message)
             }
           })
         }

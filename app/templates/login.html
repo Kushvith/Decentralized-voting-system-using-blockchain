@@ -9,7 +9,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <body>
         <div class="container">
-            <header>Signup Form</header>
+            <header>Login Form</header>
+            <div style="float: right">
+                <a href="{{url_for('signup')}}" style="background: linear-gradient(90deg, #007991, #78ffd6); 
+                    background-clip: border-box; 
+                    border: 1px solid #007991; 
+                    border-radius: 5px; 
+                    box-shadow: 0 0 5px 0 rgba(0,0,0,0.25); 
+                    color: #fff; 
+                    display: inline-block; 
+                    font-size: 16px; 
+                    font-weight: 500; 
+                    line-height: 45px; 
+                    text-align: center; 
+                    text-decoration: none; 
+                    text-shadow: 0 1px 1px rgba(0,0,0,0.25); 
+                    transition: all 0.2s ease 0s; 
+                    width: 100px; 
+                    padding: 0 20px; 
+                    cursor: pointer;
+                    ">Sign up</a>
+            </div>
             <div class="progress-bar">
                 <div class="step">
                     <p>Account details</p>
@@ -65,7 +85,9 @@
                             <button type="submit" class="submit" style="display: none;">Submit</button>
                         </div>
                     </div>
+                 
                 </form>
+               
             </div>
         </div>
         <script src="{{ url_for('static', filename='js/login.js') }}"></script>
