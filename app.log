@@ -1021,3 +1021,5 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.43.165:80
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
 DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
 INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:31] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
