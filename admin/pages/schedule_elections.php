@@ -297,7 +297,7 @@
           method:"GET",
           dataType: "jsonp",
           success:function(data){
-            alert(data.message)
+            (data.message)
             fetch()
           }
         })
@@ -368,7 +368,7 @@
       fetch()
       $('.create_election').click(function () {
         if ($('#name').val() == "" || $('#time').val() == "") {
-          alert("All feilds required")
+          ("All feilds required")
         } else {
           $.ajax({
             method: 'POST',
