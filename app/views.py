@@ -23,8 +23,8 @@ import joblib
 from flask_cors import CORS
 # The node with which our application interacts, there can be multiple
 # such nodes as well.
-app.config['MYSQL_HOST'] = '192.168.29.158'
-app.config['MYSQL_USER'] = 'user'
+app.config['MYSQL_HOST'] = '192.168.0.107'
+app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'mm'
 app.config['MYSQL_DB'] = 'decentralized'
 app.secret_key = "this_my_secreat_key_cant_be_cracked_by_anyone"
@@ -157,7 +157,7 @@ def train_model():
             faces.append(resized_face.ravel())
             labels.append(user)
     faces = np.array(faces)
-    knn = KNeighborsClassifier(n_neighbors=5)
+    knn = KNeighborsClassifier(n_neighbors=4)
     knn.fit(faces, labels)
     joblib.dump(knn, 'static/face_recognition_model.pkl')
     print("training completed")
