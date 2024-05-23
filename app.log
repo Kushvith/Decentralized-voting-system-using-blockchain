@@ -1207,3 +1207,5 @@ INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:53:11] "GET /static/css/signup.
 INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:53:11] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
 INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
