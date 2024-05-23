@@ -1138,3 +1138,62 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 134-449-635
 INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:08:47] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:09:15] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:09:54] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:09:57] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:09:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:10:14] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:10:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:11:02] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:11:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:11:47] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:12:20] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:12:45] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:13:48] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:14:23] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:14:52] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:15:15] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:15:19] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:20:06] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:20:44] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:20:56] "GET /home HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "POST //new_transaction HTTP/1.1" 201 7
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:21:14] "POST /submit HTTP/1.1" 200 -
