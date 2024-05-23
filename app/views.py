@@ -23,7 +23,7 @@ import joblib
 from flask_cors import CORS
 # The node with which our application interacts, there can be multiple
 # such nodes as well.
-app.config['MYSQL_HOST'] = '192.168.39.6'
+app.config['MYSQL_HOST'] = '192.168.29.201'
 app.config['MYSQL_USER'] = 'user'
 app.config['MYSQL_PASSWORD'] = 'mm'
 app.config['MYSQL_DB'] = 'decentralized'

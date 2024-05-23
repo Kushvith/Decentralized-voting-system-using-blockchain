@@ -4,11 +4,11 @@
 <div class="container">
     <h1 class="text-center">Chain</h1>
     <p class="text-center">Total Blocks- {{ chain.len }}</p>
-    <div class="row">
+    <div class="row d-flex flex-wrap">
 		{% for block in chain.chain %}
         
         <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center align-items-center">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header">
                     <h1 class="text-center text-primary">Block - {{block.index}} </h1>
                 </div>

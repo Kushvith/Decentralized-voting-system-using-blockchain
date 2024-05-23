@@ -85,6 +85,11 @@
                 <input type="file" name="party_logo" id="Logo" class="form-control w-50 ms-3" placeholder="Age"
                   accept="image/*">
               </div>
+              <div id="loader" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
               <button class="btn bg-success p-3 text-center offset-md-3" id="create_party_form">Create Party</button>
             </form>
           </div>
@@ -140,6 +145,8 @@
     }
     fetch()
       $('#create_party_form').click(function (e) {
+        $('#loader').show();
+        $(this).hide()
         e.preventDefault()
         img = $('#Logo').val()
         age = $('#age').val()
@@ -167,7 +174,9 @@
             processData: false,
 
             success: (data)=>{
-       
+              alert("party created successfully")
+              $('#loader').hide();
+        $("#create_party_form").show()
               img = $('#Logo').val("")
         age = $('#age').val("")
         party = $('#party_name').val("")

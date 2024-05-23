@@ -23,15 +23,16 @@
    
         <div class="row">
             {% for party in electionMSg %}
-           <div class="col-xs-12 col-sm-6 col-md-4">
+           <div class="col-xs-12 col-sm-6 col-md-4 mt-3">
             <form action="{{url_for('submit_textarea')}}" method="post">
-            <div class="card h-100">
-                <div class="card-header">
-                    <div class="img-resposive text-center">
-                        <img src="{{party.image}}" class="rounded" alt="" style="max-width: 200px;max-height:200px;" >
+            <div class="card h-100 ">
+                <div class="card-header d-flex justify-content-center align-items-center" style="height: 250px;">
+                    <div class="img-responsive text-center">
+                        <img src="{{party.image}}" class="rounded" alt="" style="max-width: 200px; max-height: 200px;">
                     </div>
                 </div>
                 <div class="card-body">
+                    <h2 class="text-center text-success">{{party.candidate_name}}</h2>
                     <h3 class="text-center text-primary">{{party.party_name}}</h3>
                     <p class="text-center text-sm">age: {{party.age}}</p>
                 </div>

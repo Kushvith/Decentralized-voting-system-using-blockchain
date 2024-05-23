@@ -1023,3 +1023,118 @@ DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 2
 INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:31] "GET /home HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.29.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:24] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:24] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:24] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:25] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:25] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:26] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:26] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/assets/img/about/2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/assets/img/about/1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/assets/img/about/3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/assets/img/about/4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/assets/img/about/5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/assets/img/header-bg.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:27] "GET /static/assets/img/map-image.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:29] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:29] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:29] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:30] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:30] "[36mGET /static/css/signup.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:57:30] "GET /static/js/signup.js HTTP/1.1" 200 -
+ERROR:root:Error occurred: (2002, "Can't connect to server on '192.168.39.6' (138)")
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\app\views.py", line 353, in signup
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "c:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "c:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\connections.py", line 195, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to server on '192.168.39.6' (138)")
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:58:27] "POST /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:58:27] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:58:27] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:55] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:55] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/assets/img/about/2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/assets/img/about/1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/assets/img/about/3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/assets/img/about/4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/assets/img/about/5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/assets/img/header-bg.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "GET /static/assets/img/map-image.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:59:59] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.237.6:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:00:16] "[35m[1mGET /results HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:00:16] "GET /results?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:00:16] "GET /results?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:00:16] "GET /results?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:00:16] "GET /results?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.29.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:01:49] "GET /results HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:01:49] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:01:49] "[33mGET /js/script_ii.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:01:50] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:02:20] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:02:20] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:02:20] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:02:23] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:02:23] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:02:23] "GET /static/js/signup.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:06:00] "POST /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:06:00] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:06:00] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:06:54] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:06:54] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:06:54] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:07:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
+DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 200 223
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:07:12] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
