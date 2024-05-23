@@ -1205,3 +1205,5 @@ MySQLdb.OperationalError: (2002, "Can't connect to server on '192.168.43.165' (1
 INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:53:11] "POST /signup HTTP/1.1" 200 -
 INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:53:11] "GET /static/css/signup.css HTTP/1.1" 200 -
 INFO:werkzeug:192.168.29.201 - - [23/May/2024 17:53:11] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
