@@ -1023,3 +1023,133 @@ DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "GET //chain HTTP/1.1" 2
 INFO:werkzeug:192.168.29.201 - - [10/May/2024 15:29:31] "GET /home HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.43.165:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 357-703-180
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/assets/img/about/1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/assets/img/about/5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/assets/img/about/2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/assets/img/about/4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/assets/img/header-bg.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/assets/img/about/3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:22] "GET /static/assets/img/map-image.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:24] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:24] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:24] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:26] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:26] "[36mGET /static/css/signup.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:35:27] "GET /static/js/signup.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:36:39] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:36:39] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:36:39] "GET /static/js/login.js HTTP/1.1" 200 -
+ERROR:root:Error occurred: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\app\views.py", line 201, in login
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\connections.py", line 195, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:37:01] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:37:01] "[36mGET /static/css/signup.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:37:01] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\app\views.py", line 201, in login
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\connections.py", line 195, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:37:18] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:37:18] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:37:18] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\app\views.py", line 201, in login
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\connections.py", line 195, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:38:11] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:38:11] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:38:11] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:54:08] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:54:08] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:54:08] "GET /static/js/signup.js HTTP/1.1" 200 -
+ERROR:root:Error occurred: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\app\views.py", line 353, in signup
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\connections.py", line 195, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:55:50] "POST /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:55:50] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:55:50] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+ERROR:root:Error occurred: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\app\views.py", line 353, in signup
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\flask_mysqldb\__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\d-c\Decentralized-voting-system-using-blockchain\venv\Lib\site-packages\MySQLdb\connections.py", line 195, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'root'@'LITHEESH' (using password: YES)")
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:58:08] "POST /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:58:08] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.165 - - [23/May/2024 14:58:08] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
