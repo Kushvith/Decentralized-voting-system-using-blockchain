@@ -1197,3 +1197,31 @@ INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:20:56] "GET /home HTTP/1.1" 200
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.29.201:8000
 DEBUG:urllib3.connectionpool:http://192.168.29.201:8000 "POST //new_transaction HTTP/1.1" 201 7
 INFO:werkzeug:192.168.29.201 - - [23/May/2024 18:21:14] "POST /submit HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.29.201:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/css/homestyles.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/assets/img/about/2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/assets/img/about/1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/assets/img/about/3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/assets/img/about/4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/assets/img/about/5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/assets/img/header-bg.jpg HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "GET /static/assets/img/map-image.png HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:41] "[33mGET /assets/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:43] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:43] "GET /static/css/signup.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:43] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:44] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:44] "[36mGET /static/css/signup.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.29.201 - - [23/May/2024 19:04:44] "GET /static/js/signup.js HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat

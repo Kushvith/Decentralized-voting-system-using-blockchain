@@ -346,8 +346,8 @@ def signup():
             message = "password should match"
         elif int(age) < 18:
             message = "age should be equal or greater than 18"
-        # elif not validate_pan_card(pan):
-        #     message = "enter the valid pan number"
+        elif not validate_pan_card(pan):
+            message = "enter the valid pan number"
         else:
           try:
             cursor = mysql.connection.cursor()
