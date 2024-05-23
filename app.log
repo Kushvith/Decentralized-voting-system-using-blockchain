@@ -1209,3 +1209,7 @@ INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-votin
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 134-449-635
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\d-c\\Decentralized-voting-system-using-blockchain\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-449-635
