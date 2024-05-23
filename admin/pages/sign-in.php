@@ -90,7 +90,7 @@
   <script>
     $(document).ready(function(){
       if($.cookie('token')&&$.cookie('role')=="staff"){
-        window.location.href = "./dashboard.php";
+        window.location.href = "./schedule_elections.php";
       }
       $('#submit-btn').click(function(e){
         e.preventDefault()
@@ -105,7 +105,7 @@
             data:$('#login_form').serialize(),
             success:(data)=>{
               if(JSON.parse(data).token){
-                  window.location.href = "./dashboard.php";
+                  window.location.href = "./schedule_elections.php";
               }
             },
             error:(xhr,status,error)=>{

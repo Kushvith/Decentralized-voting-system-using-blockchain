@@ -57,7 +57,7 @@ class contact extends voter
         $result = $statement->fetchAll();
         foreach($result as $row){
             $output .= '  <div class="col-lg-3 col-md-4">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-body">
                 <p class="text-primary pt-2">'.$row['message'].'</p>
               </div>

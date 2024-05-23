@@ -23,8 +23,13 @@ import joblib
 from flask_cors import CORS
 # The node with which our application interacts, there can be multiple
 # such nodes as well.
+<<<<<<< HEAD
 app.config['MYSQL_HOST'] = '192.168.29.71'
 app.config['MYSQL_USER'] = 'root'
+=======
+app.config['MYSQL_HOST'] = '192.168.29.201'
+app.config['MYSQL_USER'] = 'user'
+>>>>>>> 96c6276e05af3d8f38d1dd1eaa377da8ed9b3051
 app.config['MYSQL_PASSWORD'] = 'mm'
 app.config['MYSQL_DB'] = 'decentralized'
 app.secret_key = "this_my_secreat_key_cant_be_cracked_by_anyone"
@@ -346,8 +351,8 @@ def signup():
             message = "password should match"
         elif int(age) < 18:
             message = "age should be equal or greater than 18"
-        # elif not validate_pan_card(pan):
-        #     message = "enter the valid pan number"
+        elif not validate_pan_card(pan):
+            message = "enter the valid pan number"
         else:
           try:
             cursor = mysql.connection.cursor()
