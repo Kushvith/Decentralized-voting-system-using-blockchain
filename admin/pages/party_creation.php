@@ -167,7 +167,7 @@
             processData: false,
 
             success: (data)=>{
-              alert(data)
+       
               img = $('#Logo').val("")
         age = $('#age').val("")
         party = $('#party_name').val("")
